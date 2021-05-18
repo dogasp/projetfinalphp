@@ -1,0 +1,18 @@
+#tot1 {
+	float:left;
+	padding-left: 10%;
+	padding-right:35%;
+	padding-top:5%;
+	
+
+	
+}
+
+
+#panier { 
+	display:inline-block;
+	margin-top: 5%;
+	left:45em;
+	position: fixed;
+	}
+	
