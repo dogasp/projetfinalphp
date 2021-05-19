@@ -6,6 +6,6 @@
         $tmp = explode("|", $list[$i]);
         echo "<option value = '".$i."'>".$tmp[4]."</option>";
     }
-    echo "</select><br><br>";
+    echo "<br><br></select>";
     echo "<div id='result_data'></div>";
 ?>

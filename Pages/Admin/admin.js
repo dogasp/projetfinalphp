@@ -6,6 +6,9 @@ function recupForm() {
         url: "detailList.php",
         data: { "db": dataBase, "id": value },
         success: function(data) {
+            try {
+                document.getElementById("Detail").remove();
+            } catch {};
             $("#result_data").append(data);
         }
     })
