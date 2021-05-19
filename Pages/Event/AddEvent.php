@@ -15,8 +15,8 @@ closeDB($list, $events, $_POST["id"], "event");
 $users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #extraction des utilisateurs
 $list = explode("|", $users[$_SESSION["USER"]]);
 
-$list[5] = $list[5].$_POST["id"];
-$_SESSION["UserEvent"] = $list[5];
+$list[6] = $list[5].$_POST["id"];
+$_SESSION["UserEvent"] = $list[6];
 
 closeDB($list, $users, $_SESSION["USER"], "user");
 
