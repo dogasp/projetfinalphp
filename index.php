@@ -18,7 +18,8 @@
     <h1>Page pour acceder aux liens </h1>
 
     <a href="./Pages/Event/Event.php">Events</a><br>
-    <a href="./Pages/Admin/Admin.php">Admin</a>
+    <a href="./Pages/Admin/Admin.php">Admin</a><br>
+    <a href="./Pages/Magasin/Magasin.php">Magasin</a>
 
 </body>
 </html>

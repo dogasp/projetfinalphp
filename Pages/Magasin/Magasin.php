@@ -19,7 +19,7 @@
 
     
     <?php
-      $articles = explode("\n", file_get_contents("product.txt", true));
+      $articles = explode("\n", file_get_contents("../../BDD/product.txt", true));
       for ($i=0; $i<8; $i++) {
         $list = explode("|", $articles[$i]);
         echo "<div id=KIT1".$i.">";
@@ -35,8 +35,8 @@
       <form action="commande.php" method="POST">
         <u> Montant du panier : <span id="panier"  name="panier"> 0 € </span> </u>
         <p id="ARTC" name="ARTC"></p>
+      	<button type="submit" id="button">VALIDER LE PANIER</button>
       </form>
-      <button id="button" onclick="window.location.href = 'http://localhost/projet_F/commande.php ';">VALIDE LE PANIER</button>
     </div>
     
 

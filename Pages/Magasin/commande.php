@@ -15,11 +15,6 @@
 				<textarea style="display: none" name="Achat" id="commande"></textarea> <br>
 				<b> Montant de votre panier : <span id="prix"> 0 € </span> </b> <br> <br>
     			<b>Feuille de livraison</b><br><br>
-    			<label for="homme">Homme : </label><input type="radio" name="sexe" value="homme"  required id="homme">
-    			<label for="femme">Femme : </label><input type="radio" name="sexe" value="femme" required id="femme"><br>
-    			<label for="LastName">Nom : </label><input type="text" required name="LastName" placeholder="Nom" id="LastName">
-    			<label for="FirstName">Prenom : </label><input type="text" required name="FirstName" placeholder="prenom" id="FirstName">
-    			<label for="list">Année de naissance : </label><select id="list"></select><br/><br>
 				<label for="adresse">adresse de livraison :</label><textarea  rows="1" cols="25" required name="Adress" placeholder="Entrez votre adresse" id="adresse"></textarea><br>
     			<label for="City">Ville : </label><input type="text" name="City" placeholder="ville" id="City"><br>
     			<label for="postal">Code postal : </label> <input type="text" id="postal" name="postal" maxlength="5" placeholder="95000"/> <br/>
