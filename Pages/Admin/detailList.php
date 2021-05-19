@@ -12,8 +12,10 @@
         echo "pseudo : <input type ='text' name = 'nickname' placeholder='".$list[4]."'><br>";
         echo "Mot de passe : <input type ='text' name = 'password' placeholder='".$list[5]."'><br>";
         echo "rôle (0 non cotisé, 1 membre, 2 admin) : <br> <input type ='text' name = 'role' placeholder='".$list[8]."'><br><br>";
+        echo "<input type='hidden' value='".$_POST["id"]."' name='id'>";
+        echo "<input type='hidden' value='".$_POST["db"]."' name='db'>";
 
-        echo "<input name='".$_POST["db"].",".$_POST["id"]."' type='button' value='Appliquer les changements' onClick='saveChange(this)'>";
+        echo "<input type='button' value='Appliquer les changements' onClick='saveChange(this)'>";
         echo "</form>";
     }
     if ($_POST["db"] == "event"){
@@ -27,8 +29,10 @@
         echo "Date de fin (yyyy/mm/jj hh:mm:ss) : <br> <input type ='text' name = 'endingdate' placeholder='".$list[4]."'><br>";
         echo "Description : <input type ='text' name = 'password' placeholder='".$list[5]."'><br>";
         echo "Places : <input type ='text' name = 'qt' placeholder='".$list[6]."'><br><br>";
+        echo "<input type='hidden' value='".$_POST["id"]."' name='id'>";
+        echo "<input type='hidden' value='".$_POST["db"]."' name='db'>";
 
-        echo "<input name='".$_POST["db"].",".$_POST["id"]."' type='button' value='Appliquer les changements' onClick='saveChange(this)'>";
+        echo "<input type='button' value='Appliquer les changements' onClick='saveChange(this)'>";
         echo "</form>";
     }
     if ($_POST["db"] == "product"){
@@ -40,8 +44,10 @@
         echo "Prix : <input type ='text' name = 'price' placeholder='".$list[2]."'><br>";
         echo "Emplacement image : <br> <input type ='text' name = 'image' placeholder='".$list[3]."'><br>";
         echo "Description : <br> <input type ='text' name = 'description' placeholder='".$list[4]."'><br><br>";
+        echo "<input type='hidden' value='".$_POST["id"]."' name='id'>";
+        echo "<input type='hidden' value='".$_POST["db"]."' name='db'>";
 
-        echo "<input name='".$_POST["db"].",".$_POST["id"]."' type='button' value='Appliquer les changements' onClick='saveChange(this)'>";
+        echo "<input type='button' value='Appliquer les changements' onClick='saveChange()'>";
         echo "</form>";
     }
 ?>

@@ -27,15 +27,13 @@ function recupChoice() {
     })
 }
 
-function saveChange(btn) {
-    var tmp = btn.name.split(",");
-    db = tmp[0];
-    id = tmp[1];
+function saveChange() {
     $.ajax({
         type: "post",
         url: "save.php",
-        data: { "id": id, "db": db },
+        data: $("#Detail").serialize(),
         success: function(data) {
+            alert(data);
             location.reload();
         }
     })
