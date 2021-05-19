@@ -20,7 +20,7 @@
     <span>Vous avez cotisés dans notre association et vous souhaiter participer aux activités de votre association? <br> 
     Vous êtes sur la bonne page! <br>
     Pour vous y inscrire c'est juste en dessous: </span></div>
-    </div>
+    </div> 
     <div class = "container">
 
     <?php
