@@ -19,7 +19,7 @@
 
     
     <?php
-      $articles = explode("\n", file_get_contents("product.txt", true));
+      $articles = explode("\n", file_get_contents("../../BDD/product.txt", true));
       for ($i=0; $i<8; $i++) {
         $list = explode("|", $articles[$i]);
         echo "<div id=KIT1".$i.">";
