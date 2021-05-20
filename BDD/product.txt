@@ -5,4 +5,4 @@
 4|20|20|img2/KIT_EISTI5.png|Veste Zippée
 5|20|20|img2/KIT_EISTI6.png|Jogging
 6|20|15|img2/KIT_EISTI7.png|Maillot Training
-7|20|10|img2/KIT_EISTI8.png|Short Training
+7|0|10|img2/KIT_EISTI8.png|Short Training
