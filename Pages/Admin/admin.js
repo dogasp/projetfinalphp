@@ -41,3 +41,17 @@ function saveChange() {
         }
     })
 }
+
+function deleteElement() {
+    id = document.getElementById("detailId").value;
+    db = document.getElementById("detailDb").value;
+    $.ajax({
+        type: "post",
+        url: "delete.php",
+        data: { "db": db, "id": id },
+        success: function(data) {
+            alert(data);
+            location.reload();
+        }
+    })
+}
