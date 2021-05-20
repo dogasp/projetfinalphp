@@ -27,6 +27,7 @@
 
     <?php
       $articles = explode("\n", file_get_contents("../../BDD/product.txt", true));
+      array_pop($articles);
       for ($i=0; $i<8; $i++) {
         $list = explode("|", $articles[$i]);
         echo "<div id=KIT1".$i." >";
