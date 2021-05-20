@@ -20,5 +20,5 @@ else  {
 	$list[7] += $_POST["ids"];
 }
 
-#header("Location: ../../index.php", true, 301);
+header("Location: ../../index.php", true, 301);
 ?>
