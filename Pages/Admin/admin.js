@@ -1,6 +1,7 @@
 function recupForm() {
     var dataBase = document.getElementById("dataSelect").name;
     var value = document.getElementById("dataSelect").value;
+    if (value == "") return;
     $.ajax({
         type: "post",
         url: "detailList.php",
@@ -35,6 +36,20 @@ function saveChange() {
         type: "post",
         url: "save.php",
         data: $("#Detail").serialize(),
+        success: function(data) {
+            alert(data);
+            location.reload();
+        }
+    })
+}
+
+function deleteElement() {
+    id = document.getElementById("detailId").value;
+    db = document.getElementById("detailDb").value;
+    $.ajax({
+        type: "post",
+        url: "delete.php",
+        data: { "db": db, "id": id },
         success: function(data) {
             alert(data);
             location.reload();

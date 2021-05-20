@@ -11,18 +11,25 @@
 
     <div id="titre">
 	    <h1>Boutique</h1>
-      <br>
-      <h2 >Artcile Disponible</h2>
-      <h2>Ton école, ta tenue by Macron 🔥</h2>
-      <h5>Découvre la collection complète CY-Tech , choisis la tenue qu'il te faut et affiche fièrement ton soutien à ton école.</h5>
+      <h4>Découvre la collection complète CY-Tech , choisis la tenue qu'il te faut et affiche fièrement ton soutien à ton école.</h4>
+          <div class="menu">
+    <ul id="nav">
+        <li><a href="../../index.php">Accueil</a></li>
+        <li><a href="../../Pages/Event/Event.php">Events</a></li>
+        <li><a href="../../Pages/Magasin/Magasin.php">Magasin</a></li>
+        <li><a href="../../Pages/Admin/Admin.php">Utilisateurs</a></li>
+    </ul>
+    </li>
+    </div>
     </div>
     
+
+
     <?php
-	  session_start();
       $articles = explode("\n", file_get_contents("../../BDD/product.txt", true));
       for ($i=0; $i<8; $i++) {
         $list = explode("|", $articles[$i]);
-        echo "<div id=KIT1".$i.">";
+        echo "<div id=KIT1".$i." >";
         echo "<div> <h3 style='text-align : center;'> <strong>".$list[4]." : ".$list[2]." € </strong> </h3> </div>";
         echo "<div> <img src=".$list[3]."> </div>";
 		if ($_SESSION["USER"] == -1){
@@ -38,6 +45,7 @@
         echo "</div>"; 
       }
     ?>
+
 
     <div  id="destination">
 		<h2>Votre Panier</h2>

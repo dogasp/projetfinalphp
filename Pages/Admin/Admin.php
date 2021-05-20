@@ -20,8 +20,29 @@
     <title>Admin</title>
     <script src="admin.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <link rel="stylesheet" href="Admin.css">
 </head>
+
 <body>
+    <div id = "top_page">
+    <h1>Page des BG</h1>
+    <div id = "span_opac">
+    <span>Vous avez cotisés dans notre association et vous souhaiter participer aux activités de votre association? <br> 
+    Vous êtes sur la bonne page! <br>
+    Pour vous y inscrire c'est juste en dessous: </span>
+    </div> 
+
+    <div class="menu">
+    <ul id="nav">
+        <li><a href="../../index.php">Accueil</a></li>
+        <li><a href="../../Pages/Event/Event.php">Events</a></li>
+        <li><a href="../../Pages/Magasin/Magasin.php">Magasin</a></li>
+        <li><a href="../../Pages/Admin/Admin.php">Utilsateurs</a></li>
+    </ul>
+    </li>
+    </div>
+    </div>
+    
     Partie Admin ;)
     <!-- faire des sortes d'onglets-->
     <form>

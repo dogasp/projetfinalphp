@@ -12,9 +12,10 @@
         echo "pseudo : <input type ='text' name = '4' placeholder='".$list[4]."'><br>";
         echo "Mot de passe : <input type ='text' name = '5' placeholder='".$list[5]."'><br>";
         echo "rôle (0 non cotisé, 1 membre, 2 admin) : <br> <input type ='text' name = '8' placeholder='".$list[8]."'><br><br>";
-        echo "<input type='hidden' value='".$_POST["id"]."' name='id'>";
-        echo "<input type='hidden' value='".$_POST["db"]."' name='db'>";
+        echo "<input type='hidden' value='".$_POST["id"]."' name='id' id='detailId'>";
+        echo "<input type='hidden' value='".$_POST["db"]."' name='db' id='detailDb'>";
 
+        echo "<input type='button' value ='Supprimer produit' onClick='deleteElement()'>";
         echo "<input type='button' value='Appliquer les changements' onClick='saveChange(this)'>";
         echo "</form>";
     }
@@ -29,9 +30,10 @@
         echo "Date de fin (yyyy/mm/jj hh:mm:ss) : <br> <input type ='text' name = '4' placeholder='".$list[4]."'><br>";
         echo "Description : <input type ='text' name = '5' placeholder='".$list[5]."'><br>";
         echo "Places : <input type ='text' name = '6' placeholder='".$list[6]."'><br><br>";
-        echo "<input type='hidden' value='".$_POST["id"]."' name='id'>";
-        echo "<input type='hidden' value='".$_POST["db"]."' name='db'>";
+        echo "<input type='hidden' value='".$_POST["id"]."' name='id' id='detailId'>";
+        echo "<input type='hidden' value='".$_POST["db"]."' name='db' id='detailDb'>";
 
+        echo "<input type='button' value ='Supprimer produit' onClick='deleteElement()'>";
         echo "<input type='button' value='Appliquer les changements' onClick='saveChange(this)'>";
         echo "</form>";
     }
@@ -44,9 +46,10 @@
         echo "Prix : <input type ='text' name = '2' placeholder='".$list[2]."'><br>";
         echo "Emplacement image : <br> <input type ='text' name = '3' placeholder='".$list[3]."'><br>";
         echo "Description : <br> <input type ='text' name = '4' placeholder='".$list[4]."'><br><br>";
-        echo "<input type='hidden' value='".$_POST["id"]."' name='id'>";
-        echo "<input type='hidden' value='".$_POST["db"]."' name='db'>";
+        echo "<input type='hidden' value='".$_POST["id"]."' name='id' id='detailId'>";
+        echo "<input type='hidden' value='".$_POST["db"]."' name='db' id='detailDb'>";
 
+        echo "<input type='button' value ='Supprimer produit' onClick='deleteElement()'>";
         echo "<input type='button' value='Appliquer les changements' onClick='saveChange()'>";
         echo "</form>";
     }

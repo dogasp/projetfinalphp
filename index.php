@@ -22,8 +22,8 @@
     <ul id="nav">
         <li><a href="./index.php">Accueil</a></li>
         <li><a href="./Pages/Event/Event.php">Events</a></li>
-        <li><a href="./Pages/Magasin/index.php">Magasin</a></li>
-        <li><a href="./Pages/Admin/Admin.php">Users</a></li>
+        <li><a href="./Pages/Magasin/Magasin.php">Magasin</a></li>
+        <li><a href="./Pages/Admin/Admin.php">Utilisateurs</a></li>
     </ul>
     </li>
     </div>

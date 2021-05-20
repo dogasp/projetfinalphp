@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="event.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-</head>
+</head> 
 <body>
 <div id = "top_page">
     <h1>Évenements organisés par votre BDS</h1>
@@ -21,10 +21,21 @@
     Vous êtes sur la bonne page! <br>
     Pour vous y inscrire c'est juste en dessous: </span></div>
     </div> 
+</div>
+    <div class="menu">
+    <ul id="nav">
+        <li><a href="../../index.php">Accueil</a></li>
+        <li><a href="../../Pages/Event/Event.php">Events</a></li>
+        <li><a href="../../Pages/Magasin/Magasin.php">Magasin</a></li>
+        <li><a href="../../Pages/Admin/Admin.php">Utilisateurs</a></li>
+    </ul>
+    </li>
+    </div>
     <div class = "container">
 
     <?php
         $events = explode("\n", file_get_contents("../../BDD/event.txt", true)); #extraction des events
+        array_pop($events);
         foreach($events as $event){
             $list = explode("|", $event); #liste contenant les propriétés des events
             echo "<div class='event'>";
