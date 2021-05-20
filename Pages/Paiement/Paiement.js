@@ -4,7 +4,7 @@ function pay() {
         url: "confirm.php",
         data: $("#f1").serialize(),
         success: function(data) {
-            alert(data);
+            window.location.replace("../../index.php");
         }
     })
 }
