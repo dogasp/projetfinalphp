@@ -1,26 +1,35 @@
 <?php
-$nom=trim($_POST['nom']);
-$prénom=trim($_POST['prénom']);
-$prix=trim($_POST['prix']);
-$cotisation=trim($_POST['cotisation'])
+include "../../Generic/function.php";
 
-if ($cotisation=0) {
+$cotisation = $_POST['cotisation'];
 
-echo "Nous vous confirmons," .$prénom.$nom. "la bonne récéption de votre commande.  Vous avez commandé".  
-for($i=0; $i<count($produits);i++) {
-  $tmp=substr($produits[$i], 1,1)
-  for ($j=0; $j<count($tbxid);j++)
-    if $tmp=$tbxid[j]
-      $ttt=substr($produits[$i], 5,...) // 5 ligne début titre ?? durée ?? à completer selon bdd
-      echo ( $ttt ) ."pour un total de" .$prix
-// actualiser les achats dans le fichier texte de la base  
+if ($cotisation==0) {
+	echo "Merci pour votre achat";
+	$users = explode("\n", file_get_contents("../../BDD/user.txt", true));
+	$list = explode("|", $users[$_SESSION["USER"]]);
+
+	$list[8] = 1;
+	closeDB($list, $users, $_SESSION["USER"], "user");
+
+	$ids = $_POST["produits"];
+
+	$produits = explode("\n", file_get_contents("../../BDD/product.txt", true));
+	foreach (str_split($ids) as $item){
+		$list = explode("|", $produits[intval($item)]);
+		$list[1] = strval(intval($list[1])-1);
+		$produits[intval($item)] = implode("|", $list);
+	}
+
+	$tmp = implode("\n", $produits);
+	$file = fopen("../../BDD/product.txt", "w");
+	fwrite($file, $tmp);
+	fclose($file);
 }
 else  {
-echo $prénom."Merci de votre cotisation d'un montant de 10€"
-// actualiser la cotisation ds la base de données
+	echo "Merci de votre cotisation";
+
+	$users = explode("\n", file_get_contents("../../BDD/user.txt", true));
+	$list = explode("|", $users[$_SESSION["USER"]]);
+	$list[7] += $_POST["ids"];
 }
-
-
-
 ?>
-<a href="....."> Acceuil du site </a> <!--  Lien à ajouter -->

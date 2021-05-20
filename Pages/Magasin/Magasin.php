@@ -7,7 +7,7 @@
     <script type="text/javascript" src="JSMagasin.js"></script>
   </head>
 
-  <body onload="ajouterOnClick();Formulaire();" id="fct"> 
+  <body> 
 
     <div id="titre">
 	    <h1>Boutique</h1>
@@ -32,21 +32,33 @@
         echo "<div id=KIT1".$i." >";
         echo "<div> <h3 style='text-align : center;'> <strong>".$list[4]." : ".$list[2]." € </strong> </h3> </div>";
         echo "<div> <img src=".$list[3]."> </div>";
-        echo "<div> <button id=n".$i." class='article' onclick='deplacer(this)' >JE COMMANDE</button> </div>";
+		if ($_SESSION["USER"] == -1){
+			echo "<button class='article' style='background:#555' disabled>Vous n'êtes pas connecté</button>";
+		}
+		else if ($list[1] > 0){
+
+			echo "<div> <button name= ".$list[2].",".str_replace(" ", "_", $list[4])." id=".$i." class='article' onclick='panier(this)' >JE COMMANDE</button> </div>";
+		}
+		else{
+			echo "<button class='article' style='background:#555' disabled>Rupture de stock</button>";
+		}
         echo "</div>"; 
       }
     ?>
 
 
     <div  id="destination">
-      <h2>Votre Panier</h2>
-      <form action="commande.php" method="POST">
-        <u> Montant du panier : <span id="panier"  name="panier"> 0 € </span> </u>
-        <p id="ARTC" name="ARTC"></p>
-      </form>
-      <button id="button" onclick="window.location.href = 'http://localhost/projet_F/commande.php ';">VALIDE LE PANIER</button>
+		<h2>Votre Panier</h2>
+		<form id="FormPanier" action="../Paiement/Paiement.php" method="POST" onsubmit>
+			<u> Montant du panier : <span id="panierPrice"  name="panier"> 0 </span>€</u>
+			<div id="panierText"></div>
+			<br>
+			<input type="button" id="panierButton" onClick="validerPanier()" value="VALIDER LE PANIER" disabled>
+			<input type="hidden" name="cotisation" value ="0">
+			<input type="hidden" name="ids" id="ids" value ="">
+			<input type="hidden" name="price" id="price" value ="0">
+		</form>
     </div>
-    
 
   </body>
 </html>
