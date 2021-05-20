@@ -15,8 +15,14 @@ body {
     grid-column: 1 /scale 4;
 }
 
-h5 {
+h4 {
     color: orange;
+}
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 750; 
+    font-size: 350%;
 }
 
 button {
@@ -121,6 +127,10 @@ button:after {
     grid-row: 4;
 }
 
+div.article{
+height:100%;
+}
+
 #destination {
     text-align: center;
     grid-row: 2 /scale 4;
@@ -151,4 +161,55 @@ button:after {
     position: absolute;
     left: 60%;
     top: 81%;
+}
+
+tr.a :hover, #nav li:hover{background: #eda;} /*La fonction hover qui sert à foncer la case au moment où la sourie passe dessus*/
+#nav li, #nav ul {float:left;}
+
+#nav {
+float: left;
+width: 87%;
+line-height: 1;
+background: white;
+border: solid #eda;
+border-width: 0.19em;
+font-size: 170%;
+list-style: none;
+margin-left: 2.5%;
+margin-right: 50%;
+}
+
+* {
+    padding: 0;
+}
+
+#nav ul {
+width: 75%;
+line-height: 1;
+background: white;
+border: solid #a7945a;
+font-size: 100%;
+margin-left: 0!important;
+
+}
+
+
+#nav a{
+  width: 10em;
+  text-decoration: none;
+  padding: 0.25em 2em;
+  color: #7C6240;
+}
+
+#nav li {
+padding:2%;
+}
+
+div.menu{
+  padding-left:5%;
+  display: inline-block;
+  width:87%;
+  height:75%;
+  left:100%;
+
 }

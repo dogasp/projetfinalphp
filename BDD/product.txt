@@ -2,7 +2,7 @@
 1|20|35|img2/KIT_EISTI2.png|Kit Sportswear Veste Zippée
 2|20|20|img2/KIT_EISTI3.png|Kit Training
 3|20|20|img2/KIT_EISTI4.png|Veste
-4|20|20|img2/KIT_EISTI5.png|Veste Zippée
+4|20|10|img2/KIT_EISTI5.png|Veste Zippée
 5|20|20|img2/KIT_EISTI6.png|Jogging
 6|20|15|img2/KIT_EISTI7.png|Maillot Training
 7|20|10|img2/KIT_EISTI8.png|Short Training
