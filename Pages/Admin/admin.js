@@ -1,6 +1,7 @@
 function recupForm() {
     var dataBase = document.getElementById("dataSelect").name;
     var value = document.getElementById("dataSelect").value;
+    if (value == "") return;
     $.ajax({
         type: "post",
         url: "detailList.php",
