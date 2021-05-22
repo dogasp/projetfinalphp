@@ -12,7 +12,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,9 +27,8 @@
     <div id = "top_page">
     <h1>Page des BG</h1>
     <div id = "span_opac">
-    <span>Vous avez cotisés dans notre association et vous souhaiter participer aux activités de votre association? <br> 
-    Vous êtes sur la bonne page! <br>
-    Pour vous y inscrire c'est juste en dessous: </span>
+    <span><h2>Vous faites partie de la communauté des administrateurs !!!! </h2>
+    <h2>Vous pouvez alors modifier différentes infos.. </h2></span>
     </div> 
 
     <div class="menu">
@@ -42,11 +41,10 @@
     </li>
     </div>
     </div>
-    
-    Partie Admin ;)
-    <!-- faire des sortes d'onglets-->
-    <form>
-        choisissez le type des données à modifier:
+    <div class="container">
+
+    <form id ="formulaire">
+        Choisissez le type des données à modifier:
         <select id="dataSlect" onchange="recupChoice()">
             <option value="">---Selectionner---</option>
             <option value="user">Utilisateurs</option>
@@ -60,6 +58,7 @@
         </div>
     
     </form>
+    </div>
 
 </body>
 </html>

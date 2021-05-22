@@ -1,16 +1,22 @@
+html{
+      background-color: #e0e0e0;
+}
 #top_page {
     background-image: url(../../Pages/Admin/image/background_image.jpg);
     border-style: hidden;
     border-radius: 20px;
     text-align: center;
     background-size: cover;
-    text-shadow: 0 0 2px #FFD100, 0 0 30px #FFD100, 0px 0px 5px #FFD100, 0 0 150px #FFD100;
-    color: #FFD100;
+
     padding: 1%;
 }
 tr.a :hover, #nav li:hover{background: #eda;} /*La fonction hover qui sert à foncer la case au moment où la sourie passe dessus*/
 #nav li, #nav ul {float:left;}
 
+#top_page h1, li{
+      text-shadow: 0 0 2px #FFD100, 0 0 30px #FFD100, 0px 0px 5px #FFD100, 0 0 150px #FFD100;
+    color: #FFD100;
+}
 #nav {
 float: left;
 width: 87%;
@@ -55,4 +61,39 @@ div.menu{
   display: inline-block;
   width:87%;
 
+}
+
+div.container{
+  padding-top: 2%;
+  padding-bottom: 5%;
+  width: 100%;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  font-family: sans-serif;
+  background-color: #e0e0e0;
+}
+
+
+
+#listChoice {
+  padding-top: 2%;
+}
+
+div.lign_container{
+  border-bottom: 1px solid #e6e6e6;
+  padding: 20px 0;
+}
+
+input{
+  padding: 1%;
+  margin: 2%;
+}
+
+#formulaire{
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
 }

@@ -5,6 +5,8 @@ body {
     margin: 0px;
     width: 100%;
     height: 100%;
+    font-size: 17px;
+    
 }
 
 #titre {
@@ -209,7 +211,4 @@ div.menu{
   padding-left:5%;
   display: inline-block;
   width:87%;
-  height:75%;
-  left:100%;
-
 }
