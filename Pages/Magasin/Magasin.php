@@ -26,6 +26,7 @@
 
 
     <?php
+      session_start();
       $articles = explode("\n", file_get_contents("../../BDD/product.txt", true));
       array_pop($articles);
       for ($i=0; $i<8; $i++) {
@@ -50,7 +51,7 @@
 
     <div  id="destination">
 		<h2>Votre Panier</h2>
-		<form id="FormPanier" action="../Paiement/Paiement.php" method="POST" onsubmit>
+		<form id="FormPanier" action="../Paiement/Paiement.php" method="POST">
 			<u> Montant du panier : <span id="panierPrice"  name="panier"> 0 </span>€</u>
 			<div id="panierText"></div>
 			<br>

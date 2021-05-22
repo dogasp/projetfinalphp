@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (!defined($_SESSION["USER"]) || !isset($_SESSION["USER"])){
-        $_SESSION["USER"] = "0";
+        $_SESSION["USER"] = "-1";
         $_SESSION["UserEvent"] = "";
     }
 ?>
@@ -23,7 +23,21 @@
         <li><a href="./index.php">Accueil</a></li>
         <li><a href="./Pages/Event/Event.php">Events</a></li>
         <li><a href="./Pages/Magasin/Magasin.php">Magasin</a></li>
-        <li><a href="./Pages/Admin/Admin.php">Utilisateurs</a></li>
+        <?php
+            if ($_SESSION["USER"] == -1){
+                echo "<li><a href='./Pages/Utilisateur/User.php'>Se connecter</a></li>";
+            }
+            else{
+                $users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #extraction des utilisateurs
+                $list = explode("|", $users[$_SESSION["USER"]]);
+                if ($list[8] == 2){
+                    echo '<li><a href="./Pages/Admin/Admin.php">Utilisateur</a></li>';
+                }
+                else{
+                    echo '<li><a href="./Pages/Utilisateur/modifier.php">Utilisateurs</a></li>';
+                }
+            }
+        ?>
     </ul>
     </li>
     </div>
