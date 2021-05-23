@@ -24,15 +24,15 @@ if ($cotisation==0) {
 	$file = fopen("../../BDD/product.txt", "w");
 	fwrite($file, $tmp);
 	fclose($file);
-}
-else  {
-	echo "Merci de votre cotisation";
+	}
+	else  {
+		echo "Merci de votre cotisation";
 
-	$users = explode("\n", file_get_contents("../../BDD/user.txt", true));
-	$list = explode("|", $users[$_SESSION["USER"]]);
-	$list[8] = 1;
+		$users = explode("\n", file_get_contents("../../BDD/user.txt", true));
+		$list = explode("|", $users[$_SESSION["USER"]]);
+		$list[8] = 1;
 
-	closeDB($list, $users, $_SESSION["USER"], "user");
+		closeDB($list, $users, $_SESSION["USER"], "user");
 
-}
+	}
 ?>
