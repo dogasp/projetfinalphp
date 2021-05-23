@@ -9,10 +9,10 @@
     foreach($identifiant as $donnee){
 		$list = explode("|", $donnee);
         if($list[4] == $pseudo && $list[5] == $password){
-            $connecte = "vous etes connecté ";
+            $connecte = $list[8];
 			$valide = 1;
 			$_SESSION["USER"] = $list[0];
-			$_SESSION["userEvent"] = $list[6];
+			$_SESSION["UserEvent"] = $list[6];
         }
     }
 

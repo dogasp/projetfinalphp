@@ -1,24 +1,29 @@
 <?php
-    $email = $_GET['email']; 
-    $nom = $_GET['nom']; 
-    $password = $_GET['password'];
-    $password2 = $_GET['password2'];
-	$cotise = "non";
-	$pseudo = $_GET['Pseudo'];
+	session_start();
+	$users = explode("\n", file_get_contents("../../BDD/user.txt", true));
+	array_pop($users);
+	$list = explode("|", end($users));
+	$id = $list[0] + 1;
 
-	if($password == $password2){
-		//$file = new SplFileObject("donnees.txt");
-		//foreach ($file as $line) {
-    		// echo $file->key()."|". $line;
-		//}
-    	$tmp = array($email."|".$password."|".$nom."|".$cotise."|".$pseudo);
-	}
-	else echo '<script> window.location.href="http://localhost/Template/inscription.php?$err==mdp"</script>';
-		
-	//foreach($file as $val){
-		//file_put_contents("donnees.txt", $val."",FILE_APPEND);
-	//}
-	foreach($tmp as $value){
-		file_put_contents("donnees.txt", $value."\n", FILE_APPEND);
-	}
+	$sexe = $_POST['sexe'];
+	$nom = $_POST['surname'];
+	$prenom = $_POST['name'];
+    $email = $_POST['email']; 
+    $pseudo = $_POST['Pseudo']; 
+	$adress = $_POST["adresse"];
+	$year = $_POST["year"];	
+    $password = $_POST['password'];
+
+	$newList = $id."|".$nom."|".$prenom."|".$email."|".$pseudo."|".$password."|||0|".$sexe."|".$adress."|".$year;
+	array_push($users, $newList);
+	$tmp = implode("\n", $users)."\n";
+
+	$file = fopen("../../BDD/user.txt", "w");
+	fwrite($file, $tmp);
+	fclose($file);
+
+	$_SESSION["USER"] = $id;
+	$_SESSION["UserEvent"] = "";
+
+	header("Location: modifier.php");
 ?>	

@@ -25,7 +25,7 @@
 						</div>
 						<br>
 						<div class="container-login100-form-btn m-t-32">
-							<input type="button" onClick="connectUser()" class="login100-form-btn" value="test">
+							<input type="button" onClick="connectUser()" class="login100-form-btn" value="Se connecter">
 						</div>
 						<br>
 						Si vous avez des problèmes à vous connecter, veuillez contacter votre administrateur. <!--à mettre en forme -->
