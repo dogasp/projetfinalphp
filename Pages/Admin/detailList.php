@@ -1,5 +1,7 @@
 <?php
-    #"Test : ".$_POST["id"]." et ".$_POST["db"];
+    if (!isset($_POST["db"])){
+        exit("<h1>Vous n'avez pas les droits nécessaires pour acceder à cette page!</h1><br><a href='../../index.php'>Retourner à l'acueil</a>");
+    }
 
     if ($_POST["db"] == "user"){
         $users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #extraction des utilisateurs

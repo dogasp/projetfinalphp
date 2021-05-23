@@ -1,5 +1,8 @@
 <?php
     include "../../Generic/function.php";
+    if (!isset($_POST["id"])){
+        exit("<h1>Vous n'avez pas les droits nécessaires pour acceder à cette page!</h1><br><a href='../../index.php'>Retourner à l'acueil</a>");
+    }
 
     $data = explode("\n", file_get_contents("../../BDD/".$_POST["db"].".txt", true)); #extraction des données
     $list = explode("|", $data[$_POST["id"]]);

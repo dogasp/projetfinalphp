@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if ($_SESSION["USER"] == "-1"){
+        exit("<h1>Vous n'avez pas les droits nécessaires pour acceder à cette page!</h1><br><a href='../../index.php'>Retourner à l'acueil</a>");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -32,7 +39,6 @@
 				<div class="wrap-login100 p-t-30 p-b-50">
 					<p style="background:white; color: black">
 						<?php
-							session_start();
 							$users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #extraction des utilisateurs
 							$list = explode("|", $users[$_SESSION["USER"]]);
 							echo "Vos informations personnelles :";

@@ -1,6 +1,6 @@
 <?php
     include "../../Generic/function.php";
-    $message = "<h1>Vous n'avez pas les droits nécessaires pour acceder à cette page!</h1>";
+    $message = "<h1>Vous n'avez pas les droits nécessaires pour acceder à cette page!</h1><br><a href='../../index.php'>Retourner à l'acueil</a>";
     if ($_SESSION["USER"] == -1){ #si l'utilisateur n'est pas connecté, il n'as pas acces à cette page
         exit($message);
     }

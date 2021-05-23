@@ -1,15 +1,17 @@
 
 <?php
- 
-$cotisation= $_POST['cotisation']; #savoir si c'est une cotisation
+	if (!isset($_POST["ids"])){
+        exit("<h1>Vous n'avez pas les droits nécessaires pour acceder à cette page!</h1><br><a href='../../index.php'>Retourner à l'acueil</a>");
+    }
+	$cotisation= $_POST['cotisation']; #savoir si c'est une cotisation
 
-if ($cotisation==1) {
-	$prix= "10";
-}
-else{
-	$prix = $_POST["price"];
-}
-$ids = $_POST["ids"];
+	if ($cotisation==1) {
+		$prix= "10";
+	}
+	else{
+		$prix = $_POST["price"];
+	}
+	$ids = $_POST["ids"];
 ?>
 
 
