@@ -34,7 +34,6 @@
 
     <?php
         $events = explode("\n", file_get_contents("../../BDD/event.txt", true)); #extraction des events
-        array_pop($events);
         foreach($events as $event){
             $list = explode("|", $event); #liste contenant les propriétés des events
             echo "<div class='event'>";

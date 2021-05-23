@@ -1,23 +1,27 @@
 <?php
-    $datas = explode("\n", file_get_contents("../../BDD/".$_POST["db"].".txt", true)); #extraction des données
-    array_pop($datas);
+    $data = file_get_contents("../../BDD/".$_POST["db"].".txt", true);
+    $datas = explode("\n", $data); #extraction des données
     
-    $newData = array();
-    $index = 0;
-    foreach ($datas as $data){
-        $list = explode("|", $data);
-        if ($list[0] != $_POST["id"]){
-            $list[0] = $index;
-            $index ++;
-            $tmp = implode("|", $list);
-            array_push($newData, $tmp);
-        }
+    if ($_POST["id"] == count($datas)-1){
+        $data = str_replace($datas[$_POST["id"]], "", $data);
     }
-    $tmp = implode("\n", $newData);
-    echo $tmp;
+    else{
+        $data = str_replace($datas[$_POST["id"]]."\n", "", $data);
+    }
+
+    $datas = explode("\n", $data);
+
+    $index = 0;
+    for ($i = 0; $i < count($datas); $i++){
+        $list = explode("|", $datas[$i]);
+        $list[0] = $index ++;
+        $datas[$i] = implode("|", $list);
+    }
+    $tmp = implode("\n", $datas);
 
     $file = fopen("../../BDD/".$_POST["db"].".txt", "w");
     fwrite($file, $tmp);
     fclose($file);
+
     echo "Element retiré avec succès";
 ?>

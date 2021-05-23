@@ -1,10 +1,11 @@
 <?php
 	session_start();
-	$identifiant = explode("\n", file_get_contents("../../BDD/user.txt", true));
-	array_pop($identifiant);
+	$identifiant = explode(PHP_EOL, file_get_contents("../../BDD/user.txt", true));
     $pseudo = $_POST['Identifiant']; 
     $password = $_POST['password'];
 	$valide = 0;
+
+	echo count($identifiant);
 
     foreach($identifiant as $donnee){
 		$list = explode("|", $donnee);

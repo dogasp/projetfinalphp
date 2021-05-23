@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	$users = explode("\n", file_get_contents("../../BDD/user.txt", true));
-	array_pop($users);
 	$list = explode("|", end($users));
 	$id = $list[0] + 1;
 
