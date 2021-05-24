@@ -7,7 +7,7 @@ function connectUser() {
             if (data != "email ou mot de passe incorrect") {
                 if (data == "2") {
                     window.location.replace("../Admin/Admin.php");
-                } else window.location.replace("modifier.php");
+                } else window.location.replace("../../index.php");
             } else alert(data);
         }
     })

@@ -5,7 +5,7 @@
 	session_start();
 	$users = explode("\n", file_get_contents("../../BDD/user.txt", true));
 	$list = explode("|", end($users));
-	$id = $list[0] + 1;
+	$id = strval(intval($list[0]) + 1);
 
 	$sexe = $_POST['sexe'];
 	$nom = $_POST['surname'];
@@ -18,7 +18,7 @@
 
 	$newList = $id."|".$nom."|".$prenom."|".$email."|".$pseudo."|".$password."|||0|".$sexe."|".$adress."|".$year;
 	array_push($users, $newList);
-	$tmp = implode("\n", $users)."\n";
+	$tmp = implode("\n", $users);
 
 	$file = fopen("../../BDD/user.txt", "w");
 	fwrite($file, $tmp);
