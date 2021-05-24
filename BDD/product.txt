@@ -1,5 +1,5 @@
 0|19|35|img2/KIT_EISTI1.png|Kit Sportswear  
-1|19|35|img2/KIT_EISTI2.png|Kit Sportswear Veste Zippée
+1|18|35|img2/KIT_EISTI2.png|Kit Sportswear Veste Zippée
 2|20|20|img2/KIT_EISTI3.png|Kit Training
 3|20|20|img2/KIT_EISTI4.png|Veste
 4|20|10|img2/KIT_EISTI5.png|Veste Zippée

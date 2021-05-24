@@ -31,7 +31,7 @@
 	<title> Paiement</title>
   	<center><h1> Procéder au paiement. </h1> </center>
 	
-	<form id='f1' action='confirm.php' method="POST">
+	<form id='f2' action='confirm.php' method="POST">
 		<fieldset style="width:360px;">
 			<legend> <h3> Carte bancaire </h3> </legend>
 			<label for="nom"> Propriétaire de la carte </label> <br> 
@@ -77,40 +77,29 @@
 		</fieldset>
 	</form>	
 
-<div id="panier">
-  <fieldset style="width:360px">
-  <br> 
-  
-  <div id=commande style="text-align:center">
-    <u> Pannier :</u><br>
-	<?php
-		$products = explode("\n", file_get_contents("../../BDD/product.txt", true));
-		foreach (str_split($ids) as $item){
-			$list = explode("|", $products[intval($item)]);
-			echo $list[4]." ".$list[2]." €<br>";
-		}
-	?>
-    </div>
-</div>
+
 </fieldset>
 
 
+<div class = "paiement">
+<form id='f1' action='confirm.php' method="POST">
 <fieldset>
 	<legend>
 		Veuillez saisir les informations de votre paiement
 	</legend>
 	<div class="card-data">
+		
 		<p class="picto-field" id="splitCardNumberBlock">
-			<label for="cardNumberField" id="cardNumberField-label" class="control-label">Numéro de carte :</label>
-			<input aria-labelledby="cardNumberField-label" autocomplete="cc-number" maxlength="19" aria-required="true" id="cardNumberField" class="form-control" name="cardNumberField" type="tel"/>
-		</p>
-		<div data-zone-parameters="{&quot;t:formid&quot;:&quot;captureCardForm&quot;,&quot;t:formcomponentid&quot;:&quot;payment/card/CaptureCardDetails:capturecardcomponent.capturecardform&quot;}" data-container-type="zone" id="zoneCoBadgingLogo">
-			<!-- Empty block-level element to avoid empty tapestry Zone bug -->
-			<div style="display:none">
-				<input value="NVUSobD4VLzKnn/VVhht/S0TRbE=:H4sIAAAAAAAAAFvzloG1PIwhuCCxMjc1r0Q/ObEoRd85saCktCjVGch2SS1JzMwptkqGCIGkk/NzC/LzgIr1EsuAcolJOalQ3bmpiXnF8QZ6Ofn5BfFGDMVFDHr5Rel6iQWJyRmpeiWJBanFJUWVpnrJ+UWpOZlJenCTivV8gFpUTHX9T17TZKg+ycTAUFEwaJxlZiDwwSJuSY8t2FkAbawX6TIBAAA=" name="t:formdata" type="hidden"/>
-			</div>
-			<ul class="list-of-cards list-of-cards-CbVisa"></ul>
-		</div>
+	<label for="cardNumberField" id="cardNumberField-label" class="control-label">Numéro de carte&nbsp;:</label>
+	
+	<input type="tel" id="cardNumberField0" maxlength="4" pattern="[0-9]{3,7}" style="width:32px;" class="cardNumberFieldSplitBlock">
+	 - 
+	<input type="tel" id="cardNumberField1" maxlength="4" inputmode="numeric" pattern="[0-9]{3,7}" style="width:32px;" class="cardNumberFieldSplitBlock">
+	 - 
+	<input type="tel" id="cardNumberField2" maxlength="4" inputmode="numeric" pattern="[0-9]{3,7}" style="width:32px;" class="cardNumberFieldSplitBlock">
+	 - 
+	<input type="tel" id="cardNumberField3" maxlength="7" inputmode="numeric" pattern="[0-9]{3,7}" style="width:56px;" class="cardNumberFieldSplitBlock">
+</p>
 		<fieldset class="k-choice">
 			<legend>
 				Date d’expiration :
@@ -165,6 +154,23 @@
 	</div>
 	<div class="conditional"></div>
 </fieldset>
+	</form>
+	<div id="panier">
+  <fieldset style="width:360px">
+  <br> 
+  
+  <div id=commande style="text-align:center">
+    <u> Pannier :</u><br>
+	<?php
+		$products = explode("\n", file_get_contents("../../BDD/product.txt", true));
+		foreach (str_split($ids) as $item){
+			$list = explode("|", $products[intval($item)]);
+			echo $list[4]." ".$list[2]." €<br>";
+		}
+	?>
+    </div>
+</div>
+	</div>
 
 
 </body>
