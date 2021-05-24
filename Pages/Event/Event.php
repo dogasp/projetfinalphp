@@ -40,7 +40,7 @@
                     foreach (str_split($_SESSION["UserEvent"]) as $listeEvents){
                         if ($listeEvents[0] == $list[0]){
                             #création du botton comme quoi l'event a déjà été réservé
-                            echo "<button class='EventButton' disabled> Déjà réservé</button>";
+                            echo "<button name=".$list[0]." class='EventButton' onclick='annulerEvent(this)'> Annuler</button>";
                             $tmp = 1;
                         }
                     }

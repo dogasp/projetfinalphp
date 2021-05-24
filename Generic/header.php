@@ -16,7 +16,7 @@
                     echo '<li><a href="/Pages/Admin/Admin.php">Administration</a></li>';
                 }
                 else{
-                    echo '<li><a href="/Pages/Utilisateur/modifier.php">Profile</a></li>';
+                    echo '<li><a href="/Pages/Utilisateur/modifier.php">Profil</a></li>';
                 }
                 echo "<li><a href='' onclick='disconnect()'>Se deconnecter</a></li>";
             }
