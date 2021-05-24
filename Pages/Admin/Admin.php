@@ -31,15 +31,9 @@
     <h2>Vous pouvez alors modifier différentes infos.. </h2></span>
     </div> 
 
-    <div class="menu">
-    <ul id="nav">
-        <li><a href="../../index.php">Accueil</a></li>
-        <li><a href="../../Pages/Event/Event.php">Events</a></li>
-        <li><a href="../../Pages/Magasin/Magasin.php">Magasin</a></li>
-        <li><a href="../../Pages/Admin/Admin.php">Utilsateurs</a></li>
-    </ul>
-    </li>
-    </div>
+    <?php
+        include "../../Generic/header.php";
+    ?>
     </div>
     <div class="container">
 
