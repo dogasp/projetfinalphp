@@ -8,8 +8,6 @@
     $password = $_POST['password'];
 	$valide = 0;
 
-	echo count($identifiant);
-
     foreach($identifiant as $donnee){
 		$list = explode("|", $donnee);
         if($list[4] == $pseudo && $list[5] == $password){

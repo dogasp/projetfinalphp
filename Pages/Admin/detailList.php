@@ -17,7 +17,7 @@
         echo "<input type='hidden' value='".$_POST["id"]."' name='id' id='detailId'>";
         echo "<input type='hidden' value='".$_POST["db"]."' name='db' id='detailDb'>";
 
-        echo "<input type='button' value ='Supprimer produit' onClick='deleteElement()'>";
+        echo "<input type='button' value ='Supprimer utilisateur' onClick='deleteElement()'>";
         echo "<input type='button' value='Appliquer les changements' onClick='saveChange(this)'>";
         echo "</form>";
     }
@@ -26,16 +26,16 @@
         $list = explode("|", $events[$_POST["id"]]);
         echo "<form id='Detail'>";
 
-        echo "<div class='lign_container'>Titre :<input type ='text' name = '1' placeholder='".$list[1]."'></div>";
+        echo '<div class="lign_container">Titre : <textarea name = "1" placeholder="'.$list[1].'" value=""></textarea></div>';
         echo "<div class='lign_container'>Endroit :<input type ='text' name = '2' placeholder='".$list[2]."'></div>";
         echo "<div class='lign_container'>Date de début (yyyy/mm/jj hh:mm:ss) : <input type ='text' name = '3' placeholder='".$list[3]."'></div>";
         echo "<div class='lign_container'>Date de fin (yyyy/mm/jj hh:mm:ss) : <input type ='text' name = '4' placeholder='".$list[4]."'></div>";
-        echo "<div class='lign_container'>Description : <input type ='text' name = '5' placeholder='".$list[5]."'></div>";
+        echo '<div class="lign_container">Description : <textarea name = "5" placeholder="'.$list[5].'" value=""></textarea></div>';
         echo "<div class='lign_container'>Places :<input type ='text' name = '6' placeholder='".$list[6]."'></div>";
         echo "<input type='hidden' value='".$_POST["id"]."' name='id' id='detailId'>";
         echo "<input type='hidden' value='".$_POST["db"]."' name='db' id='detailDb'>";
 
-        echo "<input type='button' value ='Supprimer produit' onClick='deleteElement()'>";
+        echo "<input type='button' value ='Supprimer event' onClick='deleteElement()'>";
         echo "<input type='button' value='Appliquer les changements' onClick='saveChange(this)'>";
         echo "</form>";
     }
