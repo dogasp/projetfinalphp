@@ -14,6 +14,9 @@
         echo "<div class='lign_container'>pseudo :<input type ='text' name = '4' placeholder='".$list[4]."'></div>";
         echo "<div class='lign_container'>Mot de passe :<input type ='text' name = '5' placeholder='".$list[5]."'></div>";
         echo "<div class='lign_container'>rôle (0 non cotisé, 1 membre, 2 admin) : <input type ='text' name = '8' placeholder='".$list[8]."'></div>";
+        echo "<div class='lign_container'>Sexe :<input type ='text' name = '9' placeholder='".$list[9]."'></div>";
+        echo "<div class='lign_container'>adresse :<input type ='text' name = '10' placeholder='".$list[10]."'></div>";
+        echo "<div class='lign_container'>Année de naissance :<input type ='text' name = '11' placeholder='".$list[11]."'></div>";
         echo "<input type='hidden' value='".$_POST["id"]."' name='id' id='detailId'>";
         echo "<input type='hidden' value='".$_POST["db"]."' name='db' id='detailDb'>";
 
