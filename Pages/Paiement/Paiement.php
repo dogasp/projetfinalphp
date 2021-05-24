@@ -94,6 +94,79 @@
 </div>
 </fieldset>
 
+
+<fieldset>
+	<legend>
+		Veuillez saisir les informations de votre paiement
+	</legend>
+	<div class="card-data">
+		<p class="picto-field" id="splitCardNumberBlock">
+			<label for="cardNumberField" id="cardNumberField-label" class="control-label">Numéro de carte :</label>
+			<input aria-labelledby="cardNumberField-label" autocomplete="cc-number" maxlength="19" aria-required="true" id="cardNumberField" class="form-control" name="cardNumberField" type="tel"/>
+		</p>
+		<div data-zone-parameters="{&quot;t:formid&quot;:&quot;captureCardForm&quot;,&quot;t:formcomponentid&quot;:&quot;payment/card/CaptureCardDetails:capturecardcomponent.capturecardform&quot;}" data-container-type="zone" id="zoneCoBadgingLogo">
+			<!-- Empty block-level element to avoid empty tapestry Zone bug -->
+			<div style="display:none">
+				<input value="NVUSobD4VLzKnn/VVhht/S0TRbE=:H4sIAAAAAAAAAFvzloG1PIwhuCCxMjc1r0Q/ObEoRd85saCktCjVGch2SS1JzMwptkqGCIGkk/NzC/LzgIr1EsuAcolJOalQ3bmpiXnF8QZ6Ofn5BfFGDMVFDHr5Rel6iQWJyRmpeiWJBanFJUWVpnrJ+UWpOZlJenCTivV8gFpUTHX9T17TZKg+ycTAUFEwaJxlZiDwwSJuSY8t2FkAbawX6TIBAAA=" name="t:formdata" type="hidden"/>
+			</div>
+			<ul class="list-of-cards list-of-cards-CbVisa"></ul>
+		</div>
+		<fieldset class="k-choice">
+			<legend>
+				Date d’expiration :
+			</legend>
+			<p>
+				<label for="expirydatefield" id="expirydatefield-label" class="control-label"><span></span></label>
+				<span aria-labelledby="expirydatefield-label" class="monthdatafield" id="expirydatefield">
+					<label class="month-date-label" for="expirydatefield-month">
+						Mois :
+						<span class="styledSelect">
+							<select autocomplete="cc-month" name="expirydatefield-month" class="date-select" id="expirydatefield-month">
+								<option value="01">01</option>
+								<option value="02">02</option>
+								<option value="03">03</option>
+								<option value="04">04</option>
+								<option value="05">05</option>
+								<option value="06">06</option>
+								<option value="07">07</option>
+								<option value="08">08</option>
+								<option value="09">09</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select>
+						</span>
+					</label>
+					<label class="year-date-label" for="expirydatefield-year">
+						Année :
+						<span class="styledSelect">
+							<select autocomplete="cc-year" name="expirydatefield-year" class="date-select" id="expirydatefield-year">
+								<option value="2021">2021</option>
+								<option value="2022">2022</option>
+								<option value="2023">2023</option>
+								<option value="2024">2024</option>
+								<option value="2025">2025</option>
+								<option value="2026">2026</option>
+								<option value="2027">2027</option>
+								<option value="2028">2028</option>
+								<option value="2029">2029</option>
+								<option value="2030">2030</option>
+								<option value="2031">2031</option>
+							</select>
+						</span>
+					</label>
+				</span>
+			</p>
+		</fieldset>
+		<p>
+			<label for="cvvfield" id="cvvfield-label" class="control-label">Cryptogramme visuel :</label>
+			<input aria-labelledby="cvvfield-label" maxlength="3" autocomplete="OFF" id="cvvfield" class="form-control" name="cvvfield" type="tel"/>
+		</p>
+	</div>
+	<div class="conditional"></div>
+</fieldset>
+
+
 </body>
 </html> 
 
