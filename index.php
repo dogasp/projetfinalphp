@@ -19,8 +19,8 @@
         include "Generic/header.php"; 
     ?>
     <div class="suite">
-    <a href="./Pages/Event/Event.php">Events</a><br>
-    <a href="./Pages/Admin/Admin.php">Admin</a>
+    <br>
+    <p> a</p>
     </div>
     <div class="presentation">
     <h1>L'Equipe du BDS</h1>
