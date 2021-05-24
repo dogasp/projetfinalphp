@@ -1,7 +1,3 @@
-<?php
-    session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,15 +17,10 @@
     Vous êtes sur la bonne page! <br>
     Pour vous y inscrire c'est juste en dessous: </span></div>
     </div> 
-    <div class="menu">
-    <ul id="nav">
-        <li><a href="../../index.php">Accueil</a></li>
-        <li><a href="../../Pages/Event/Event.php">Events</a></li>
-        <li><a href="../../Pages/Magasin/Magasin.php">Magasin</a></li>
-        <li><a href="../../Pages/Admin/Admin.php">Utilisateurs</a></li>
-    </ul>
-    </li>
-    </div>
+    <?php
+        session_start();
+        include "../../Generic/header.php";
+    ?>
     <div class = "container">
 
     <?php

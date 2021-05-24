@@ -12,21 +12,15 @@
     <div id="titre">
 	    <h1>Boutique</h1>
       <h4>Découvre la collection complète CY-Tech , choisis la tenue qu'il te faut et affiche fièrement ton soutien à ton école.</h4>
-          <div class="menu">
-    <ul id="nav">
-        <li><a href="../../index.php">Accueil</a></li>
-        <li><a href="../../Pages/Event/Event.php">Events</a></li>
-        <li><a href="../../Pages/Magasin/Magasin.php">Magasin</a></li>
-        <li><a href="../../Pages/Admin/Admin.php">Utilisateurs</a></li>
-    </ul>
-    </li>
-    </div>
+    <?php
+      session_start();
+      include "../../Generic/header.php";
+    ?>
     </div>
     
 
 
     <?php
-      session_start();
       $articles = explode("\n", file_get_contents("../../BDD/product.txt", true));
       for ($i=0; $i<8; $i++) {
         $list = explode("|", $articles[$i]);
