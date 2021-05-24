@@ -28,7 +28,7 @@
 							<input type="button" onClick="connectUser()" class="login100-form-btn" value="Se connecter">
 						</div>
 						<br>
-						Si vous avez des problèmes à vous connecter, veuillez contacter votre administrateur. <!--à mettre en forme -->
+						<p>Si vous avez des problèmes à vous connecter, veuillez contacter votre administrateur. </p>
 					</form>
 					<br>
 					<form class="login100-form validate-form p-b-33 p-t-5" action="inscription.php">
