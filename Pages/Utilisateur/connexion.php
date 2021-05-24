@@ -7,7 +7,7 @@
     $pseudo = $_POST['Identifiant']; 
     $password = $_POST['password'];
 	$valide = 0;
-
+	
     foreach($identifiant as $donnee){
 		$list = explode("|", $donnee);
         if($list[4] == $pseudo && $list[5] == $password){

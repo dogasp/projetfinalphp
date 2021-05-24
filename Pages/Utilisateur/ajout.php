@@ -27,5 +27,5 @@
 	$_SESSION["USER"] = $id;
 	$_SESSION["UserEvent"] = "";
 
-	header("Location: modifier.php");
+	header("Location: ../../index.php");
 ?>	

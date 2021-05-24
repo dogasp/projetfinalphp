@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if (!defined($_SESSION["USER"]) || !isset($_SESSION["USER"])){
+    if (!defined($_SESSION["USER"]) && !isset($_SESSION["USER"])){
         $_SESSION["USER"] = "-1";
         $_SESSION["UserEvent"] = "";
     }
