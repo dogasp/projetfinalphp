@@ -4,10 +4,7 @@
 	padding-right:35%;
 	padding-top:5%;
 	
-
-	
 }
-
 
 #panier { 
 	display:inline-block;
@@ -16,3 +13,43 @@
 	position: fixed;
 	}
 	
+
+#captureCardForm div.card-data {
+  border-top: 1px solid gray;
+  margin-top: .4em;
+  width: 48%; }
+
+fieldset div.picto-field {
+font-size: .75em;
+padding: 0.5em 0;
+margin-bottom: 0.5em; }
+
+p.picto-field {
+  display: inline-block;
+}
+
+fieldset p {
+    padding: 0.5em 0;
+    margin: 0.5em 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+input {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    padding: 0.3em;
+    margin: 0 0 5px 0;
+    border: 1px solid #808080;
+}
+.k-choice label {
+    display: inline-block;
+    font-weight: normal;
+    padding: 0;
+}
+
+#cvvfield {
+    width: 2.2em;
+}
