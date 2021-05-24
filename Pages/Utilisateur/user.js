@@ -4,7 +4,6 @@ function connectUser() {
         url: "connexion.php",
         data: $("#formLogins").serialize(),
         success: function(data) {
-            alert(data);
             if (data != "email ou mot de passe incorrect") {
                 if (data == "2") {
                     window.location.replace("../Admin/Admin.php");
