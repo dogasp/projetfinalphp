@@ -19,8 +19,8 @@
         include "Generic/header.php"; 
     ?>
     <div class="suite">
-    <br>
-    <p> a</p>
+        <br>
+        <p>a</p>
     </div>
     <div class="presentation">
     <h1>L'Equipe du BDS</h1>

@@ -7,10 +7,7 @@
     #changement sur l'event
     $events = explode("\n", file_get_contents("../../BDD/event.txt", true));
     $list = explode("|", $events[$_POST["id"]]);
-    if ($list[6] == "0"){
-        exit("Il n'y a plus de place de disponible.");
-    }
-    $list[6] = strval(intval($list[6]) - 1);
+    $list[6] = strval(intval($list[6]) + 1);
 
     closeDB($list, $events, $_POST["id"], "event");
 
@@ -18,10 +15,10 @@
     $users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #extraction des utilisateurs
     $list = explode("|", $users[$_SESSION["USER"]]);
 
-    $list[6] = $list[6].$_POST["id"];
+    $list[6] = str_replace($_POST["id"], "", $list[6]);
     $_SESSION["UserEvent"] = $list[6];
 
     closeDB($list, $users, $_SESSION["USER"], "user");
 
-    echo "Event bien réservé !";
+    echo "Event bien annulé !";
 ?>
