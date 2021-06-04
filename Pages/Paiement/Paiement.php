@@ -1,6 +1,6 @@
 
 <?php
-	if (!isset($_POST["ids"])){
+	if (!isset($_POST["cotisation"])){
         exit("<h1>Vous n'avez pas les droits nécessaires pour acceder à cette page!</h1><br><a href='../../index.php'>Retourner à l'acueil</a>");
     }
 	$cotisation= $_POST['cotisation']; #savoir si c'est une cotisation
@@ -10,8 +10,8 @@
 	}
 	else{
 		$prix = $_POST["price"];
+		$ids = $_POST["ids"];
 	}
-	$ids = $_POST["ids"];
 ?>
 
 
@@ -114,7 +114,19 @@
 				 Pannier :
 			</u>
 			<br>
-			<?php        $products = explode("\n", file_get_contents("../../BDD/product.txt", true));        foreach (str_split($ids) as $item){            $list = explode("|", $products[intval($item)]);            echo $list[4]." ".$list[2]." €<br>";        }    ?>
+			<?php
+				if ($ids != "-1"){
+					$products = explode("\n", file_get_contents("../../BDD/product.txt", true));        
+					foreach (str_split($ids) as $item){
+						$list = explode("|", $products[intval($item)]);            
+						echo $list[4]." ".$list[2]." €<br>";        
+					}   
+				}
+				else{
+					echo "Cotisation";
+				}
+				
+				?>
 		</div>
 </div>
 		</body>

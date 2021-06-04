@@ -97,6 +97,16 @@
 							<input type="button" class="login100-form-btn" value="Appliquer les changements" onClick="saveChanges()">
 						</div>
 						<br>
+
+					</form>
+					
+					<!--partie pour payer la cotisation-->
+					<form method="POST" action="../Paiement/Paiement.php">
+						<input type="hidden" name="cotisation" value= "<?php  echo $list[0]; ?>">
+						<input type="hidden" name="price" value= "10">
+						<input type="hidden" name="ids" value= "-1">
+						<?php echo "<input type='submit' value='Payer la cotisation'>"?>
+					</form>
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,7 @@
 <?php
+    //fichier utilisé dans la page event pour qu'un utilisateur puisse annuler un event
     if (!isset($_POST["id"])){
+        //vérification qu'on est dans le cas où c'est un utilisateur qui fait la demande de suppression d'evenement
         exit("<h1>Vous n'avez pas les droits nécessaires pour acceder à cette page!</h1><br><a href='../../index.php'>Retourner à l'acueil</a>");
     }
     include "../../Generic/function.php";
