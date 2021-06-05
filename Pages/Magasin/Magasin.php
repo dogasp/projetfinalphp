@@ -12,14 +12,15 @@
     <div id="titre">
 	    <h1>Boutique</h1>
       <h4>Découvre la collection complète CY-Tech , choisis la tenue qu'il te faut et affiche fièrement ton soutien à ton école.</h4>
+      <?php
+        session_start();
+        include "../../Generic/header.php";
+      ?>
     </div>
     
 
 
     <?php
-      session_start();
-      include "../../Generic/header.php";
-
       #récupération de la liste des articles
       $articles = explode("\n", file_get_contents("../../BDD/product.txt", true));
       for ($i=0; $i<count($list); $i++) { #pour chaque element, on l'affiche
