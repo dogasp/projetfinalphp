@@ -27,26 +27,26 @@
     <h1>L'Equipe du BDS</h1>
     <div class="membres">
     <div class = mate>
-    <img src="images_accueil/image_crew/Gwendal.png" alt="Gwendal Auphan">
+    <img src="images_accueil/image_crew/Gwendal.png" alt="Gwendal Auphan" width="30%">
     <h2>Gwendal Auphan</h2>
     </div>
     <div class = mate>
-    <img src="images_accueil/image_crew/Dorian.png" alt="Dorian Gaspar">
+    <img src="images_accueil/image_crew/Dorian.png" alt="Dorian Gaspar" width="20%">
     <h2>Dorian Gaspar</h2>
     </div>
 
      <div class = mate>
-    <img src="images_accueil/image_crew/Quentin.png" alt="Quentin De giovanni">
+    <img src="images_accueil/image_crew/Quentin.png" alt="Quentin De giovanni" width="10%">
     <h2>Quentin De giovanni</h2>
     </div>
 
      <div class = mate>
-    <img src="images_accueil/image_crew/Alex.png" alt="Alexandre Richaudeau">
+    <img src="images_accueil/image_crew/Alex.png" alt="Alexandre Richaudeau" width="10%">
     <h2>Alexandre Richaudeau</h2>
     </div>
 
      <div class = mate>
-    <img src="images_accueil/image_crew/Arthur.png" alt="Arthur Dounies">
+    <img src="images_accueil/image_crew/Arthur.png" alt="Arthur Dounies" width="10%">
     <h2>Arthur Dounies</h2>
     </div>
 
