@@ -1,4 +1,5 @@
 function pay() {
+    //requète AJAX pour le traitement après le "paiement"
     $.ajax({
         type: "post",
         url: "confirm.php",

@@ -1,16 +1,17 @@
 
 <?php
+	#on regarde si l'utilisateur à une raison d'être la, sinon on lui envoie un message
 	if (!isset($_POST["cotisation"])){
         exit("<h1>Vous n'avez pas les droits nécessaires pour acceder à cette page!</h1><br><a href='../../index.php'>Retourner à l'acueil</a>");
     }
-	$cotisation= $_POST['cotisation']; #savoir si c'est une cotisation
+	$cotisation= $_POST['cotisation']; #savoir si c'est une cotisation ou un paiement
 
 	if ($cotisation==1) {
-		$prix= "10";
+		$prix= "10"; #le prix de cotisation est de 10€
 	}
 	else{
 		$prix = $_POST["price"];
-		$ids = $_POST["ids"];
+		$ids = $_POST["ids"]; #panier
 	}
 ?>
 
@@ -115,11 +116,11 @@
 			</u>
 			<br>
 			<?php
-				if ($ids != "-1"){
-					$products = explode("\n", file_get_contents("../../BDD/product.txt", true));        
+				if ($ids != "-1"){ #si on a un paiement
+					$products = explode("\n", file_get_contents("../../BDD/product.txt", true)); #on récupère la base de donnée des produits
 					foreach (str_split($ids) as $item){
-						$list = explode("|", $products[intval($item)]);            
-						echo $list[4]." ".$list[2]." €<br>";        
+						$list = explode("|", $products[intval($item)]);
+						echo $list[4]." ".$list[2]." €<br>"; #pour chauque produit, si il est dans la liste du panier, on l'affiche
 					}   
 				}
 				else{

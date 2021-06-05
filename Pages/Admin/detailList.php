@@ -1,8 +1,9 @@
 <?php
+    //fichier servant à afficher tous les champs modifiable pour un type de donnée
     if (!isset($_POST["db"])){
         exit("<h1>Vous n'avez pas les droits nécessaires pour acceder à cette page!</h1><br><a href='../../index.php'>Retourner à l'acueil</a>");
     }
-
+    //on gère les données de type différent et pour chacune d'elle, on créé des champs d'entrée correspondant
     if ($_POST["db"] == "user"){
         $users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #extraction des utilisateurs
         $list = explode("|", $users[$_POST["id"]]);
@@ -20,12 +21,12 @@
         echo "<input type='hidden' value='".$_POST["id"]."' name='id' id='detailId'>";
         echo "<input type='hidden' value='".$_POST["db"]."' name='db' id='detailDb'>";
 
-        echo "<input type='button' value ='Supprimer utilisateur' onClick='deleteElement()'>";
-        echo "<input type='button' value='Appliquer les changements' onClick='saveChange(this)'>";
+        echo "<input type='button' value ='Supprimer utilisateur' onClick='deleteElement()'>";      //bouton pour supprimer l'element
+        echo "<input type='button' value='Appliquer les changements' onClick='saveChange(this)'>";  //bouton pour enregistrer les changements
         echo "</form>";
     }
     if ($_POST["db"] == "event"){
-        $events = explode("\n", file_get_contents("../../BDD/event.txt", true)); #extraction des utilisateurs
+        $events = explode("\n", file_get_contents("../../BDD/event.txt", true)); #extraction des events
         $list = explode("|", $events[$_POST["id"]]);
         echo "<form id='Detail'>";
 
@@ -43,7 +44,7 @@
         echo "</form>";
     }
     if ($_POST["db"] == "product"){
-        $products = explode("\n", file_get_contents("../../BDD/product.txt", true)); #extraction des utilisateurs
+        $products = explode("\n", file_get_contents("../../BDD/product.txt", true)); #extraction des produits
         $list = explode("|", $products[$_POST["id"]]);
         echo "<form id='Detail'>";
 

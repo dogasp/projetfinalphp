@@ -12,6 +12,7 @@
 
     <?php 
         session_start();
+        //initialisation des variables si elles ne sont pas définies
         if (!defined($_SESSION["USER"]) && !isset($_SESSION["USER"])){
             $_SESSION["USER"] = "-1";
             $_SESSION["UserEvent"] = "";

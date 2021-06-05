@@ -12,32 +12,33 @@
     <div id="titre">
 	    <h1>Boutique</h1>
       <h4>Découvre la collection complète CY-Tech , choisis la tenue qu'il te faut et affiche fièrement ton soutien à ton école.</h4>
-    <?php
-      session_start();
-      include "../../Generic/header.php";
-    ?>
     </div>
     
 
 
     <?php
-      $articles = explode("\n", file_get_contents("../../BDD/product.txt", true));
-      for ($i=0; $i<8; $i++) {
-        $list = explode("|", $articles[$i]);
-        echo "<div id=KIT1".$i." >";
-        echo "<div> <h3 style='text-align : center;'> <strong>".$list[4]." : ".$list[2]." € </strong> </h3> </div>";
-        echo "<div> <img src=".$list[3]."> </div>";
-		if ($_SESSION["USER"] == -1){
-			echo "<button class='article' style='background:#555' disabled>Vous n'êtes pas connecté</button>";
-		}
-		else if ($list[1] > 0){
+      session_start();
+      include "../../Generic/header.php";
 
-			echo "<div> <button name= ".$list[2].",".str_replace(" ", "_", $list[4])." id=".$i." class='article' onclick='panier(this)' >JE COMMANDE</button> </div>";
-		}
-		else{
-			echo "<button class='article' style='background:#555' disabled>Rupture de stock</button>";
-		}
-        echo "</div>"; 
+      #récupération de la liste des articles
+      $articles = explode("\n", file_get_contents("../../BDD/product.txt", true));
+      $list = explode("|", $articles[$i]);
+      for ($i=0; $i<count($list); $i++) { #pour chaque element, on l'affiche
+          echo "<div id=KIT1".$i." >";
+          echo "<div> <h3 style='text-align : center;'> <strong>".$list[4]." : ".$list[2]." € </strong> </h3> </div>";
+          echo "<div> <img src=".$list[3]."> </div>";
+      if ($_SESSION["USER"] == -1){ #si l'utilisateur n'est pas connecté, on affiche un bouton dédié
+        echo "<button class='article' style='background:#555' disabled>Vous n'êtes pas connecté</button>";
+      }
+      else if ($list[1] > 0){
+        #si un article est disponible, on affiche le bouton pour le commander
+        echo "<div> <button name= ".$list[2].",".str_replace(" ", "_", $list[4])." id=".$i." class='article' onclick='panier(this)' >JE COMMANDE</button> </div>";
+      }
+      else{
+        #si l'article est en rupture de stock, on affiche un bouton pour l'anoncer
+        echo "<button class='article' style='background:#555' disabled>Rupture de stock</button>";
+      }
+          echo "</div>"; 
       }
     ?>
 

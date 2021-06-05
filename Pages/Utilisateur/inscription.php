@@ -7,19 +7,10 @@
 	
 	<link rel="icon" type="image/png" href="img/BDS.jpg"/>
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="user.js"></script>
 </head>
 
 	<body onload="Formulaire()">
-	<script>
-            function Formulaire() {
-                var birthdate=document.getElementById("list");//on se place dans ID list 
-                for (var i = 1990; i<2005; i++) { //probleme pour la boucle for : année de naissance
-                var opt = document.createElement('option');//on crée un une balise option
-                opt.text = i;//avec comme texte i
-                opt.value = i;//avec comme value i
-                birthdate.appendChild(opt);}
-            }
-        </script>
 		<div class="limiter">
 			<div class="container-login100" style="background-image: url('img/BDS_garde.jpg');">
 				<div class="wrap-login100 p-t-30 p-b-50">

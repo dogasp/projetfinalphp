@@ -20,31 +20,15 @@
 
 	<body onload="Formulaire()">
 	<h1>Modification du profil</h1>
-	<?php
-        include "../../Generic/header.php";
-    ?>
-        <script>
-            function Formulaire() {
-                var birthdate=document.getElementById("list");//on se place dans ID list 
-				var opt = document.createElement('option');
-				opt.text = "Selecitonnez une année";
-				opt.value = "";
-				birthdate.appendChild(opt);
-                for (var i = 1990; i<2005; i++) { //probleme pour la boucle for : année de naissance
-					var opt = document.createElement('option');//on crée un une balise option
-					opt.text = i;//avec comme texte i
-					opt.value = i;//avec comme value i
-					birthdate.appendChild(opt);
-				}
-			}
-        </script>
 		<div class="limiter">
 			
 			<div class="container-login100" style="background-image: url('img/BDS_garde.jpg');">
 			<div class ="recap">
 			<div style="background:white; color: black; padding:4%; border-radius:2em">
 						<?php
-							$users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #extraction des utilisateurs
+							include "../../Generic/header.php";
+							//affichage des informations personnelles
+							$users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #récupération des informations de l'utilisateur
 							$list = explode("|", $users[$_SESSION["USER"]]);
 							echo "<h3 style ='text-align: center'>Vos informations personnelles :</h3>"; 
 							echo "<p style = 'text-align: justify'> Nom et prénom : ".$list[1]." ".$list[2]."<br>Sexe : ".$list[9]."<br>Mail : ".$list[3]."<br>Pseudo : ".$list[4]."<br>Adresse : ".$list[10]."<br>Année de naissance : ".$list[11]."<br>Votre mdp : ".$list[5];

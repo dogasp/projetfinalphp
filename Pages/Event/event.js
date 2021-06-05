@@ -1,5 +1,6 @@
 function souscrireEvent(btn) {
     var idEvent = btn.name;
+    //requète AJAX pour ajouter un evenement 
     $.ajax({
         type: "post",
         url: "AddEvent.php",
@@ -14,6 +15,7 @@ function souscrireEvent(btn) {
 
 function annulerEvent(btn) {
     var idEvent = btn.name;
+    //requète AJAX pour retirer un event
     $.ajax({
         type: "post",
         url: "SuppEvent.php",

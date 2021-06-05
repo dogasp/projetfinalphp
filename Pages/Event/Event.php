@@ -28,25 +28,25 @@
         foreach($events as $event){
             $list = explode("|", $event); #liste contenant les propriétés des events
             echo "<div class='event'>";
-            echo "<div class='date'> du ". $list[3] . " au ". $list[4] . "</div>";
-            echo "<div class='name'>". $list[1] . "</div>";
-            echo "<div class='description'><br>". $list[5] . "<br><br></div>";
-            echo "<div class='place'>". $list[2] . "</div>";
-            echo "<div class='quantity'>".$list[6] ." places restantes</div>";
+            echo "<div class='date'> du ". $list[3] . " au ". $list[4] . "</div>"; #affichage de la date de l'event
+            echo "<div class='name'>". $list[1] . "</div>";                        #affichage du titre
+            echo "<div class='description'><br>". $list[5] . "<br><br></div>";     #affichage de la description
+            echo "<div class='place'>". $list[2] . "</div>";                       #affichage de l'endroit
+            echo "<div class='quantity'>".$list[6] ." places restantes</div>";     #affichage du nombre de places restantes
 
-            if ($_SESSION["USER"] != -1){
+            if ($_SESSION["USER"] != -1){  #vérificationsi l'utilisateur est connecté
                 $tmp = 0;
-                if ($_SESSION["UserEvent"] != NULL && intval($list[6]) > 0){
-                    foreach (str_split($_SESSION["UserEvent"]) as $listeEvents){
+                if (intval($list[6]) > 0){ #check si l'utilisateur à cotisé
+                    foreach (str_split($_SESSION["UserEvent"]) as $listeEvents){ #on bouche dans tous les évènements réservé par l'utilisateur
                         if ($listeEvents[0] == $list[0]){
-                            #création du botton comme quoi l'event a déjà été réservé
+                            #création du botton pour annuler l'event
                             echo "<button name=".$list[0]." class='EventButton' onclick='annulerEvent(this)'> Annuler</button>";
                             $tmp = 1;
                         }
                     }
                 }
                 if ($tmp == 0){
-                    #event n'est pas réservé
+                    #event n'est pas réservé par l'utiliosateur, on place le bouton pour le reserver
                     echo "<button name=".$list[0]." class='EventButton' onclick='souscrireEvent(this)'>Reserver</button>";
                 }
             }
