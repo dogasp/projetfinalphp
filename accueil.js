@@ -8,7 +8,7 @@ function plusSlides(n) {
 
 // fonction pour récupérer l'id de la slide actuelle
 function currentSlide(n) {
-    showSlides(slideIndex = n);
+    showSlides(slideIndex = n); 
 }
 
 //fonction pour afficher les slides
