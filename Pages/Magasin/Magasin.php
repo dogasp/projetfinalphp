@@ -23,7 +23,7 @@
     <?php
       #récupération de la liste des articles
       $articles = explode("\n", file_get_contents("../../BDD/product.txt", true));
-      for ($i=0; $i<count($list); $i++) { #pour chaque element, on l'affiche
+      for ($i=0; $i<count($articles); $i++) { #pour chaque element, on l'affiche
           $list = explode("|", $articles[$i]);
           echo "<div id=KIT1".$i." >";
           echo "<div> <h3 style='text-align : center;'> <strong>".$list[4]." : ".$list[2]." € </strong> </h3> </div>";
