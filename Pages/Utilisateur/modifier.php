@@ -20,13 +20,16 @@
 
 	<body onload="Formulaire()">
 	<h1>Modification du profil</h1>
+	<?php
+		include "../../Generic/header.php";
+	?>
 		<div class="limiter">
 			
 			<div class="container-login100" style="background-image: url('img/BDS_garde.jpg');">
 			<div class ="recap">
 			<div style="background:white; color: black; padding:4%; border-radius:2em">
 						<?php
-							include "../../Generic/header.php";
+							
 							//affichage des informations personnelles
 							$users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #récupération des informations de l'utilisateur
 							$list = explode("|", $users[$_SESSION["USER"]]);

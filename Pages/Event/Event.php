@@ -36,7 +36,7 @@
 
             if ($_SESSION["USER"] != -1){  #vérificationsi l'utilisateur est connecté
                 $tmp = 0;
-                if (intval($list[6]) > 0){ #check si l'utilisateur à cotisé
+                if (intval($list[6]) > 0){ #on regarde si il reste de la place
                     foreach (str_split($_SESSION["UserEvent"]) as $listeEvents){ #on bouche dans tous les évènements réservé par l'utilisateur
                         if ($listeEvents[0] == $list[0]){
                             #création du botton pour annuler l'event
