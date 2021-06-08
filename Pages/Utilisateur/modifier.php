@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	include "../../Generic/function.php";
 	if ($_SESSION["USER"] == "-1"){
         exit("<h1>Vous n'avez pas les droits nécessaires pour acceder à cette page!</h1><br><a href='../../index.php'>Retourner à l'acueil</a>");
     }
@@ -8,7 +8,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	    <title>LE VESTIAIRE </title>
+		<title>LE VEISTIAIRE - Profil</title>
+		<link rel="icon" href="../../images_accueil/image_logo/logo.png" sizes="32x32">
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	
@@ -31,10 +32,9 @@
 						<?php
 							
 							//affichage des informations personnelles
-							$users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #récupération des informations de l'utilisateur
-							$list = explode("|", $users[$_SESSION["USER"]]);
+							SplitDB($_SESSION["USER"], "user");
 							echo "<h3 style ='text-align: center'>Vos informations personnelles :</h3>"; 
-							echo "<p style = 'text-align: justify'> Nom et prénom : ".$list[1]." ".$list[2]."<br>Sexe : ".$list[9]."<br>Mail : ".$list[3]."<br>Pseudo : ".$list[4]."<br>Adresse : ".$list[10]."<br>Année de naissance : ".$list[11]."<br>Votre mdp : ".$list[5];
+							echo "<p style = 'text-align: justify'> Nom et prénom : ".$list[1]." ".$list[2]."<br>Sexe : ".$list[9]."<br>Mail : ".$list[3]."<br>Pseudo : ".$list[4]."<br>Adresse : ".$list[10]."<br>Année de naissance : ".$list[7]."<br>Votre mdp : ".$list[5];
 						?>
 					</div>
 		</div>
@@ -92,11 +92,12 @@
 						<input type="hidden" name="cotisation" value= "<?php  echo $list[0]; ?>">
 						<input type="hidden" name="price" value= "10">
 						<input type="hidden" name="ids" value= "-1">
-						<?php echo "<input type='submit' value='Payer la cotisation'>"?>
+						<?php if ($list[8] == 0) echo "<input type='submit' value='Payer la cotisation'>"?>
 					</form>
 				</div>
 			</div>
 		</div>
 		
 	</body>
+<?php include "../../Generic/Footer.php"; ?>
 </html>

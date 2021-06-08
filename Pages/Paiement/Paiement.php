@@ -19,6 +19,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>LE VEISTIAIRE - Paiement</title>
+		<link rel="icon" href="../../images_accueil/image_logo/logo.png" sizes="32x32">
 		<link rel="stylesheet" type="text/css" href="forme.css" />
 		<script type='text/javascript' src='Paiement.js' >
 		</script>
@@ -131,6 +133,7 @@
 		</div>
 </div>
 </body>
+<?php include "../../Generic/Footer.php"; ?>
 </html>
 
 

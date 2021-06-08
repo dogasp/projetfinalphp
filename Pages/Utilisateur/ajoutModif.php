@@ -17,7 +17,7 @@
 	$year = $_POST["year"];	
     $password = $_POST['password'];
 
-    $tmp = array($nom, $prenom, $email, $pseudo, $password, "", "", "", $sexe, $adress, $year); //mise en liste
+    $tmp = array($nom, $prenom, $email, $pseudo, $password, "", $year, "", $sexe, $adress); //mise en liste
     for ($i = 1; $i < 12; $i++){
         if ($tmp[$i-1] != "" && $tmp[$i-1] != $list[$i]){ //pour chaque element, on regarde si la valeur entrée est non nulle et différente de l'ancienne
             $list[$i] = $tmp[$i-1];

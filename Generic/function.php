@@ -9,4 +9,10 @@
         fwrite($file, $tmp); //écriture (override) des données
         fclose($file);
     }
+
+    function SplitDB($id, $dbname){
+        $data = explode("\n", file_get_contents("../../BDD/".$dbname.".txt", true)); //récupération de la base de donnée
+        $list = explode("|", $data[$id]);
+        return $list;
+    }
 ?>

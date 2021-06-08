@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
   <head>
-    <title>LE VEISTIAIRE</title>
-    <link rel="icon" href="img2/cropped-logo-bds-1-180x180.png" sizes="32x32">
+    <title>LE VEISTIAIRE - Magasin</title>
+    <link rel="icon" href="../../images_accueil/image_logo/logo.png" sizes="32x32">
     <link rel="stylesheet" type="text/css" href="Magasin.css" />
     <script type="text/javascript" src="JSMagasin.js"></script>
   </head>
@@ -17,8 +17,6 @@
         include "../../Generic/header.php";
       ?>
     </div>
-    
-
 
     <?php
       #récupération de la liste des articles
@@ -26,7 +24,7 @@
       for ($i=0; $i<count($articles); $i++) { #pour chaque element, on l'affiche
           $list = explode("|", $articles[$i]);
           echo "<div id=KIT1".$i." >";
-          echo "<div> <h3 style='text-align : center;'> <strong>".$list[4]." : ".$list[2]." € </strong> </h3> </div>";
+          echo "<div> <h3 style='text-align : center;'> <strong>".$list[4]." : ".$list[2]." € </strong> </h3> (".$list[1]." elements restants) </div>";
           echo "<div> <img src=".$list[3]."> </div>";
       if ($_SESSION["USER"] == -1){ #si l'utilisateur n'est pas connecté, on affiche un bouton dédié
         echo "<button class='article' style='background:#555' disabled>Vous n'êtes pas connecté</button>";
@@ -58,6 +56,7 @@
     </div>
 
   </body>
+<?php include "../../Generic/Footer.php"; ?>
 </html>
 
 

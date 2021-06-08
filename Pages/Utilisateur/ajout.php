@@ -17,7 +17,7 @@
 	$year = $_POST["year"];	
     $password = $_POST['password'];
 
-	$newList = $id."|".$nom."|".$prenom."|".$email."|".$pseudo."|".$password."|||0|".$sexe."|".$adress."|".$year;
+	$newList = $id."|".$nom."|".$prenom."|".$email."|".$pseudo."|".$password."||".$year."|0|".$sexe."|".$adress;
 
 	//enregistrement du nouvel utilisateur dans le fichier
 	array_push($users, $newList);

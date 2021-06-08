@@ -1,2 +1,2 @@
 0|Match Cy-Tech vs ESSEC|Cergy|2021/06/15 10:00:00|2021/06/15 14:00:00|Match de foot opposant l'ESSEC à CY-TECH, prêt à les exploser ?|99
-1|Match coupe d'europe|Saint Denis|2021/07/15 20:00:00|2021/07/15 23:00:00|Vennez nombreux regarder un des premiers match de la coupe d'europe de football|29
+1|Match coupe d'europe|Saint Denis|2021/07/15 20:00:00|2021/07/15 23:00:00|Vennez nombreux regarder un des premiers match de la coupe d'europe de football|1

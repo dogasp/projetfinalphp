@@ -1,12 +1,12 @@
 <?php
+    include "../../Generic/function.php";
     //fichier servant à afficher tous les champs modifiable pour un type de donnée
     if (!isset($_POST["db"])){
         exit("<h1>Vous n'avez pas les droits nécessaires pour acceder à cette page!</h1><br><a href='../../index.php'>Retourner à l'acueil</a>");
     }
     //on gère les données de type différent et pour chacune d'elle, on créé des champs d'entrée correspondant
     if ($_POST["db"] == "user"){
-        $users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #extraction des utilisateurs
-        $list = explode("|", $users[$_POST["id"]]);
+        $list = SplitDB($_POST["id"], "user");
         echo "<form id='Detail'>";
 
         echo "<div class='lign_container'>Nom de famille :<input type ='text' name = '1' placeholder='".$list[1]."'></div>";
@@ -17,7 +17,7 @@
         echo "<div class='lign_container'>rôle (0 non cotisé, 1 membre, 2 admin) : <input type ='text' name = '8' placeholder='".$list[8]."'></div>";
         echo "<div class='lign_container'>Sexe :<input type ='text' name = '9' placeholder='".$list[9]."'></div>";
         echo "<div class='lign_container'>adresse :<input type ='text' name = '10' placeholder='".$list[10]."'></div>";
-        echo "<div class='lign_container'>Année de naissance :<input type ='text' name = '11' placeholder='".$list[11]."'></div>";
+        echo "<div class='lign_container'>Année de naissance :<input type ='text' name = '11' placeholder='".$list[7]."'></div>";
         echo "<input type='hidden' value='".$_POST["id"]."' name='id' id='detailId'>";
         echo "<input type='hidden' value='".$_POST["db"]."' name='db' id='detailDb'>";
 
@@ -26,8 +26,8 @@
         echo "</form>";
     }
     if ($_POST["db"] == "event"){
-        $events = explode("\n", file_get_contents("../../BDD/event.txt", true)); #extraction des events
-        $list = explode("|", $events[$_POST["id"]]);
+        $list = SplitDB($_POST["id"], "event");
+
         echo "<form id='Detail'>";
 
         echo '<div class="lign_container">Titre : <textarea name = "1" placeholder="'.$list[1].'" value=""></textarea></div>';
@@ -44,8 +44,8 @@
         echo "</form>";
     }
     if ($_POST["db"] == "product"){
-        $products = explode("\n", file_get_contents("../../BDD/product.txt", true)); #extraction des produits
-        $list = explode("|", $products[$_POST["id"]]);
+        $list = SplitDB($_POST["id"], "product");
+
         echo "<form id='Detail'>";
 
         echo "<p>Quantité :<input type ='text' name = '1' placeholder='".$list[1]."'></div>";

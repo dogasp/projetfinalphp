@@ -10,7 +10,7 @@
 
     for ($i = 1; $i < count($list); $i++){  //parcours des elemtns de la base de donnée
         if ($_POST["db"] == "user" && $i == 6){
-            $i = 8; //skip de certains index dans la partie user (ce sont les historiques d'achat)
+            $i = 7; //skip de certains index dans la partie user (ce sont les historiques d'achat)
         }
         if($_POST[$i] != null){ //si la veleur envoyée n'est pas nulle, on remplace la valeur
             $list[$i] = $_POST[$i];

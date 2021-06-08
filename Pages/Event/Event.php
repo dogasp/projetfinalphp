@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event BDS</title>
+    <title>LE VEISTIAIRE - Event</title>
+    <link rel="icon" href="../../images_accueil/image_logo/logo.png" sizes="32x32">
     <link rel="stylesheet" href="style.css">
     <script src="event.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -34,26 +35,28 @@
             echo "<div class='place'>". $list[2] . "</div>";                       #affichage de l'endroit
             echo "<div class='quantity'>".$list[6] ." places restantes</div>";     #affichage du nombre de places restantes
 
-            if ($_SESSION["USER"] != -1){  #vérificationsi l'utilisateur est connecté
+            if ($_SESSION["USER"] >0){  #vérificationsi l'utilisateur est connecté et à cotisé (ou est un admin)
                 $tmp = 0;
-                if (intval($list[6]) > 0){ #on regarde si il reste de la place
-                    foreach (str_split($_SESSION["UserEvent"]) as $listeEvents){ #on bouche dans tous les évènements réservé par l'utilisateur
-                        if ($listeEvents == $list[0]){
-                            #création du botton pour annuler l'event
-                            echo "<button name=".$list[0]." class='EventButton' onclick='annulerEvent(this)'> Annuler</button>";
-                            $tmp = 1;
-                        }
+                
+                foreach (str_split($_SESSION["UserEvent"]) as $listeEvents){ #on bouche dans tous les évènements réservé par l'utilisateur
+                    if ($listeEvents == $list[0]){
+                        #création du botton pour annuler l'event
+                        echo "<button name=".$list[0]." class='EventButton' onclick='annulerEvent(this)'> Annuler</button>";
+                        $tmp = 1;
                     }
                 }
-                if ($tmp == 0){
+                
+                if ($tmp == 0 && intval($list[6]) > 0){
                     #event n'est pas réservé par l'utiliosateur, on place le bouton pour le reserver
                     echo "<button name=".$list[0]." class='EventButton' onclick='souscrireEvent(this)'>Reserver</button>";
                 }
             }
+            else echo "Veuillez vous inscrire et cotiser pour pouvoir participer";
             
             echo "</div>";
         }
     ?>
     </div>
 </body>
+<?php include "../../Generic/Footer.php"; ?>
 </html>

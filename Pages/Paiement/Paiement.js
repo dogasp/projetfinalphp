@@ -6,6 +6,7 @@ function pay() {
         data: $("#f1").serialize(),
         success: function(data) {
             window.location.replace("../../index.php");
+            alert(data);
         }
     })
 }

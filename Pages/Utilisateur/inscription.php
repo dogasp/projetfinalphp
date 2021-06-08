@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>LE VESTIAIRE </title>
+	<title>LE VEISTIAIRE - Profil</title>
+    <link rel="icon" href="../../images_accueil/image_logo/logo.png" sizes="32x32">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
@@ -70,4 +71,5 @@
 		</div>
 		
 	</body>
+<?php include "../../Generic/Footer.php"; ?>
 </html>

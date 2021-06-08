@@ -10,19 +10,13 @@
 	if ($cotisation==0) {
 		#il s'agit d'un achat
 		echo "Merci pour votre achat";
-		$users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #récupération des données
-		$list = explode("|", $users[$_SESSION["USER"]]);
-
-		$ids = $_POST["produits"];
-
-		$list[7] = $list[7].$ids; # ajout des produits achetés à la liste de l'utilisateur
-
-		closeDB($list, $users, $_SESSION["USER"], "user");	#fermeture de la base de donnée
-
 		$produits = explode("\n", file_get_contents("../../BDD/product.txt", true)); #récupération de la base des données des produits
+		
 		foreach (str_split($ids) as $item){		#pour chaque produit, on retire 1 en quantité disponible
 			$list = explode("|", $produits[intval($item)]);
-			$list[1] = strval(intval($list[1])-1);
+			$list[1] = intval($list[1])-1;
+			if ($list[1] < 0) exit("Vous ne pouvez pas commander plus que le stock disponible");
+			$list[1] = strval($list[1];)
 			$produits[intval($item)] = implode("|", $list);
 		}
 
@@ -41,6 +35,5 @@
 		$list[8] = 1;
 
 		closeDB($list, $users, $_SESSION["USER"], "user");#fermeture de la base de donnée
-
 	}
 ?>
