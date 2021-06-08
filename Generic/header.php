@@ -22,7 +22,7 @@
                 }
                 echo "<li><a href='' onclick='disconnect()'>Se deconnecter</a></li>"; //toujoours si la personne est connectée, on lui propose le bouton pour se deconnecter
             }
-        ?>
+        ?> 
         </ul>
     </li>
 </div>
