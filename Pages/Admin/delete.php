@@ -8,7 +8,7 @@
     
     //le dernier element est spécial car il n'as pas de \n, dans les deux cas, on remplace l'element par du vide, ce qui a pour effet de le supprimer
     if ($_POST["id"] == count($datas)-1){
-        $data = str_replace($datas[$_POST["id"]], "", $data);
+        $data = str_replace("\n".$datas[$_POST["id"]], "", $data);
     }
     else{
         $data = str_replace($datas[$_POST["id"]]."\n", "", $data);

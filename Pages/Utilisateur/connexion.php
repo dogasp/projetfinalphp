@@ -5,7 +5,7 @@
         exit("<h1>Vous n'avez pas les droits nécessaires pour acceder à cette page!</h1><br><a href='../../index.php'>Retourner à l'acueil</a>");
     }
 	session_start();
-	$identifiant = explode(PHP_EOL, file_get_contents("../../BDD/user.txt", true)); // récupération des données utilisateur
+	$identifiant = explode("\n", file_get_contents("../../BDD/user.txt", true)); // récupération des données utilisateur
     $pseudo = $_POST['Identifiant']; //récupération des données transmises
     $password = $_POST['password'];
 	$valide = 0; //par défaut, on considère que les logins entrés sont invalides

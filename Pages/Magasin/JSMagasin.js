@@ -25,7 +25,7 @@ function viderPanier(button) {
     id = tmp[1];
     //on réajuste les variables
     total -= parseInt(prix);
-    ids.replace(id, "");
+    ids = ids.replace(id, "");
     button.parentNode.remove(); //on retire l'affichage dans le panier
     document.getElementById("panierPrice").innerText = total; //on remet le total
     if (total == 0) document.getElementById("panierButton").disabled = true; //désactivation du bouton valider panier si il n'y a pas d'articles

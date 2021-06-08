@@ -101,8 +101,8 @@
 								<?php  echo "Total :" .$prix."€"  ?>
 								<br>
 								<br>
-								<input type="hidden" name="cotisation" value='<?php echo ($cotisation) ?>' >
-								<input type="hidden" name="produits" value='<?php echo ($ids) ?>' >
+								<input type="hidden" name="cotisation" value='<?php echo $cotisation ?>' >
+								<input type="hidden" name="produits" value='<?php echo $ids ?>' >
 								<input type="button" name="Payer" value="Payer" onClick="pay()">
 							</p>
 						</div>
@@ -130,7 +130,7 @@
 				?>
 		</div>
 </div>
-		</body>
-	</html>
+</body>
+</html>
 
 

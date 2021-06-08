@@ -38,7 +38,7 @@
                 $tmp = 0;
                 if (intval($list[6]) > 0){ #on regarde si il reste de la place
                     foreach (str_split($_SESSION["UserEvent"]) as $listeEvents){ #on bouche dans tous les évènements réservé par l'utilisateur
-                        if ($listeEvents[0] == $list[0]){
+                        if ($listeEvents == $list[0]){
                             #création du botton pour annuler l'event
                             echo "<button name=".$list[0]." class='EventButton' onclick='annulerEvent(this)'> Annuler</button>";
                             $tmp = 1;
