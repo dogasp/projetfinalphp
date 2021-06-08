@@ -116,7 +116,7 @@
 			</u>
 			<br>
 			<?php
-				if ($ids != "-1"){ #si on a un paiement
+				if ($cotisation==0){ #si on a un paiement
 					$products = explode("\n", file_get_contents("../../BDD/product.txt", true)); #on récupère la base de donnée des produits
 					foreach (str_split($ids) as $item){
 						$list = explode("|", $products[intval($item)]);
