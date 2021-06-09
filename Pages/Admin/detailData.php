@@ -7,7 +7,7 @@
     echo '<option value=""> --Choisissez un Element-- </option>';
     $list = explode("\n", file_get_contents("../../BDD/".$_POST["id"].".txt", true)); //récupération des éléments
     for($i = 0; $i < count($list); $i++){
-        $tmp = explode("|", $list[$i]);
+        $tmp = explode("µ", $list[$i]);
         if ($_POST["id"] == "event") $index = 1;
         else $index = 4;
         echo "<option value = '".$i."'>".$tmp[$index]."</option>"; //affichage du nom dans la liste

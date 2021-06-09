@@ -5,7 +5,7 @@
 	}
 	session_start();
 	$users = explode("\n", file_get_contents("../../BDD/user.txt", true)); //récupération du fichier utilisateur
-	$list = explode("|", end($users));
+	$list = explode("µ", end($users));
 	$id = strval(intval($list[0]) + 1); //attribution de l'id du nouvel utilisateur en fonction du dernier dans le fichier
 
 	$sexe = $_POST['sexe']; //récupération des champs
@@ -17,7 +17,7 @@
 	$year = $_POST["year"];	
     $password = $_POST['password'];
 
-	$newList = $id."|".$nom."|".$prenom."|".$email."|".$pseudo."|".$password."||".$year."|0|".$sexe."|".$adress;
+	$newList = $id."µ".$nom."µ".$prenom."µ".$email."µ".$pseudo."µ".$password."µµ".$year."µ0µ".$sexe."µ".$adress;
 
 	//enregistrement du nouvel utilisateur dans le fichier
 	array_push($users, $newList);

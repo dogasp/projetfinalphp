@@ -6,7 +6,7 @@
 
     #changement sur l'event
     $events = explode("\n", file_get_contents("../../BDD/event.txt", true));
-    $list = explode("|", $events[$_POST["id"]]);
+    $list = explode("µ", $events[$_POST["id"]]);
     if ($list[6] == "0"){ #si aucune palce n'est dispos, on quitte le fichier avec un message
         exit("Il n'y a plus de place de disponible.");
     }
@@ -16,7 +16,7 @@
 
     #changements sur l'utilisateur
     $users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #extraction des utilisateurs
-    $list = explode("|", $users[$_SESSION["USER"]]);
+    $list = explode("µ", $users[$_SESSION["USER"]]);
 
     $list[6] = $list[6].$_POST["id"]; #ajout de l'id de l'évènement à ceux enregistrés
     $_SESSION["UserEvent"] = $list[6]; #ajout à la variable de session

@@ -1,5 +1,5 @@
-0|Gaspar|Dorian|gaspardori@cy-tech.eu|dogasp|1234|1|2001|2|Homme|Pontoise
-1|Auphan|Gwendal|Gwendalauphan@gmail.com|gwenilapeuf|123||2001|1|homme|14 route de la haize, Le quoniam
-2|El yousfi|Amal|wesh@gmail.com|yo|1234||2001|1|homme|8 avenue jean bart
-3|zesrfg|hrtfg|zreltgoinuhj@igyuzfr.fr|hey|123||2001|0|homme|zriouh
-4|Auphan|Gwendal|Gwendalauphan@gmail.com|io|123||1990|0|homme|14 route de la haize, Le quoniam
+0µGasparµDorianµgaspardori@cy-tech.euµdogaspµ1234µ1µ2001µ2µHommeµPontoise
+1µAuphanµGwendalµGwendalauphan@gmail.comµgwenilapeufµ123µµ2001µ1µhommeµ14 route de la haize, Le quoniam
+2µAuphanµGwendalµwesh@gmail.comµyoµ1234µµ2001µ1µhommeµ14 route de la haize, Le quoniam
+3µEl yousfiµAmalµzreltgoinuhj@igyuzfr.frµgwenilapeufµ1234µµ2001µ2µfemmeµ8 avenue jean bart
+4µAuphanµGwendalµGwendalauphan@gmail.comµioµ123µµ1990µ0µhommeµ14 route de la haize, Le quoniam

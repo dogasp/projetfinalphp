@@ -13,7 +13,7 @@
             }
             else{
                 $users = explode("\n", file_get_contents($_SERVER['DOCUMENT_ROOT']."/BDD/user.txt", true)); //extraction des utilisateurs
-                $list = explode("|", $users[$_SESSION["USER"]]);
+                $list = explode("µ", $users[$_SESSION["USER"]]);
                 if ($list[8] == 2){ //si l'utilisateur est connecté, on lui propose soit la page d'administration soit sa page de profil suivant son "grade"
                     echo '<li><a href="/Pages/Admin/Admin.php">Administration</a></li>';
                 }

@@ -27,7 +27,7 @@
     <?php
         $events = explode("\n", file_get_contents("../../BDD/event.txt", true)); #extraction des events
         foreach($events as $event){
-            $list = explode("|", $event); #liste contenant les propriétés des events
+            $list = explode("µ", $event); #liste contenant les propriétés des events
             echo "<div class='event'>";
             echo "<div class='date'> du ". $list[3] . " au ". $list[4] . "</div>"; #affichage de la date de l'event
             echo "<div class='name'>". $list[1] . "</div>";                        #affichage du titre

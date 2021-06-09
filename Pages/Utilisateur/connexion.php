@@ -11,7 +11,7 @@
 	$valide = 0; //par défaut, on considère que les logins entrés sont invalides
 	
     foreach($identifiant as $donnee){ //on boucle dans la liste des utilisateurs et on regarde si un login/mdp corresond à ce que l'utilisateur à entré
-		$list = explode("|", $donnee);
+		$list = explode("µ", $donnee);
         if($list[4] == $pseudo && $list[5] == $password){
             $connecte = $list[8];		//sauvegarde du grade de l'utilisateur connecté
 			$valide = 1;				//un utilisateur à été trouvé

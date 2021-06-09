@@ -8,14 +8,14 @@
 
     #changement sur l'event
     $events = explode("\n", file_get_contents("../../BDD/event.txt", true)); //récupération de la base de donnée
-    $list = explode("|", $events[$_POST["id"]]); #séparation suivant les éléments
+    $list = explode("µ", $events[$_POST["id"]]); #séparation suivant les éléments
     $list[6] = strval(intval($list[6]) + 1); #incrémentation du nombre de places disponibles
 
     closeDB($list, $events, $_POST["id"], "event"); #fermeture de la base de donnée 
 
     #changements sur l'utilisateur
     $users = explode("\n", file_get_contents("../../BDD/user.txt", true)); #extraction des utilisateurs
-    $list = explode("|", $users[$_SESSION["USER"]]);
+    $list = explode("µ", $users[$_SESSION["USER"]]);
 
     $list[6] = str_replace($_POST["id"], "", $list[6]); #modification des élènements réservés par l'utilisateur
     $_SESSION["UserEvent"] = $list[6]; #modification des évents enregistrés dans la session

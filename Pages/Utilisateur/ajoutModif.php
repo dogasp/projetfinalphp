@@ -6,7 +6,7 @@
     include "../../Generic/function.php";
 
     $users = explode("\n", file_get_contents("../../BDD/user.txt", true)); //récupération des données utilisateur
-	$list = explode("|", $users[$_SESSION["USER"]]);
+	$list = explode("µ", $users[$_SESSION["USER"]]);
 
     $sexe = $_POST['sexe']; //récupération des variables
 	$nom = $_POST['surname'];

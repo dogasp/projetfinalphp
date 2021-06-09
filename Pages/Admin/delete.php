@@ -19,9 +19,9 @@
     //réagencement des index, on parcours tous les éléments en leur attribuant un index en ordre croissant de 0 à n-1
     $index = 0;
     for ($i = 0; $i < count($datas); $i++){
-        $list = explode("|", $datas[$i]);
+        $list = explode("µ", $datas[$i]);
         $list[0] = $index ++;
-        $datas[$i] = implode("|", $list);
+        $datas[$i] = implode("µ", $list);
     }
     $tmp = implode("\n", $datas); //enregistrement dans la base de donnée
 

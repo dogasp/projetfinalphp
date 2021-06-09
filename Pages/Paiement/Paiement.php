@@ -121,7 +121,7 @@
 				if ($cotisation==0){ #si on a un paiement
 					$products = explode("\n", file_get_contents("../../BDD/product.txt", true)); #on récupère la base de donnée des produits
 					foreach (str_split($ids) as $item){
-						$list = explode("|", $products[intval($item)]);
+						$list = explode("µ", $products[intval($item)]);
 						echo $list[4]." ".$list[2]." €<br>"; #pour chauque produit, si il est dans la liste du panier, on l'affiche
 					}   
 				}

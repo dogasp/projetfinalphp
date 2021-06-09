@@ -6,7 +6,7 @@
     }
 
     $data = explode("\n", file_get_contents("../../BDD/".$_POST["db"].".txt", true)); #extraction des données
-    $list = explode("|", $data[$_POST["id"]]);
+    $list = explode("µ", $data[$_POST["id"]]);
 
     for ($i = 1; $i < count($list); $i++){  //parcours des elemtns de la base de donnée
         if ($_POST["db"] == "user" && $i == 6){
