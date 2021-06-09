@@ -73,13 +73,12 @@ tr.a :hover,
 
 div.membres {
     display: flex;
-    flex-wrap: wrap;
+    margin: 5%;
     flex-direction: row;
-    padding-left: 15%;
 }
 
 div.mate {
-    padding: 3%;
+    padding: 7% 2%;
     text-align: center;
     width: 40%;
 }

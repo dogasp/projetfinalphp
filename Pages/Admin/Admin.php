@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="Admin.css">
 </head>
 
-<body>
+<body style ="min-height:1200px">
     <div id = "top_page">
     <h1>Page des BG</h1>
     <div id = "span_opac">

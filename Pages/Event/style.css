@@ -17,7 +17,7 @@ html {
 h1 {
     text-align: center;
     font-family: sans-serif;
-    font-weight: 750;
+    font-weight: 750; 
     font-size: 350%;
 }
 
@@ -90,30 +90,21 @@ div.event {
     border-radius: 10px;
 }
 
-tr.a :hover,
-#nav li:hover {
-    background: #eda;
-}
 
-
-/*La fonction hover qui sert à foncer la case au moment où la souris passe dessus*/
-
-#nav li,
-#nav ul {
-    float: left;
-}
+tr.a :hover, #nav li:hover{background: #eda;} /*La fonction hover qui sert à foncer la case au moment où la sourie passe dessus*/
+#nav li, #nav ul {float:left;}
 
 #nav {
-    float: left;
-    width: 87%;
-    line-height: 1;
-    background: white;
-    border: solid #eda;
-    border-width: 0.19em;
-    font-size: 170%;
-    list-style: none;
-    margin-left: 2.5%;
-    margin-right: 50%;
+float: left;
+width: 87%;
+line-height: 1;
+background: white;
+border: solid #eda;
+border-width: 0.19em;
+font-size: 170%;
+list-style: none;
+margin-left: 2.5%;
+margin-right: 50%;
 }
 
 * {
@@ -121,27 +112,30 @@ tr.a :hover,
 }
 
 #nav ul {
-    width: 75%;
-    line-height: 1;
-    background: white;
-    border: solid #a7945a;
-    font-size: 100%;
-    margin-left: 0!important;
+width: 75%;
+line-height: 1;
+background: white;
+border: solid #a7945a;
+font-size: 100%;
+margin-left: 0!important;
+
 }
 
-#nav a {
-    width: 10em;
-    text-decoration: none;
-    padding: 0.25em 2em;
-    color: #7C6240;
+
+#nav a{
+  width: 10em;
+  text-decoration: none;
+  padding: 0.25em 2em;
+  color: #7C6240;
 }
 
 #nav li {
-    padding: 2%;
+padding:2%;
 }
 
-div.menu {
-    padding-left: 5%;
-    display: inline-block;
-    width: 87%;
+div.menu{ 
+  padding-left:5%;
+  display: inline-block;
+  width:87%;
+
 }

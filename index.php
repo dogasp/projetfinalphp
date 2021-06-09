@@ -32,22 +32,22 @@
     <h2>Gwendal Auphan</h2>
     </div>
     <div class = mate>
-    <img src="images_accueil/image_crew/Dorian.png" alt="Dorian Gaspar" width="20%">
+    <img src="images_accueil/image_crew/Dorian.png" alt="Dorian Gaspar" width="30%">
     <h2>Dorian Gaspar</h2>
     </div>
 
      <div class = mate>
-    <img src="images_accueil/image_crew/Quentin.png" alt="Quentin De giovanni" width="10%">
+    <img src="images_accueil/image_crew/Quentin.png" alt="Quentin De giovanni" width="30%">
     <h2>Quentin De giovanni</h2>
     </div>
 
      <div class = mate>
-    <img src="images_accueil/image_crew/Alex.png" alt="Alexandre Richaudeau" width="10%">
+    <img src="images_accueil/image_crew/Alex.png" alt="Alexandre Richaudeau" width="30%">
     <h2>Alexandre Richaudeau</h2>
     </div>
 
      <div class = mate>
-    <img src="images_accueil/image_crew/Arthur.png" alt="Arthur Dounies" width="10%">
+    <img src="images_accueil/image_crew/Arthur.png" alt="Arthur Dounies" width="30%">
     <h2>Arthur Dounies</h2>
     </div>
 
