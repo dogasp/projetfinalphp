@@ -1,4 +1,4 @@
-# Fictive BDE website
+# Fictive BDS website
 
 ## Objective
 As a group of 5 we had to build a website as if it was for a BDS
